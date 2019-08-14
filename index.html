@@ -179,6 +179,9 @@
 		<script type="text/javascript" src="js/mui.poppicker.js"></script>
 		
 		 <script type="text/javascript" charset="utf-8">
+			 $(function(){
+				 	$(".part_send").css('overflow','hidden')
+			 })
 
 
 		  	mui.init();
@@ -251,9 +254,10 @@
 							$(".part_send").css({'margin-top':'0.2rem'})	
 							$(".part_send").css({'height':'auto'})
 							$(".part_send_close").css('display','none')
+								$(".part_send").css('overflow','')
 							$(".recipient_titile.part_send_title").css('display','flex')
 							$(".part_send").css({'margin-bottom':'0.95rem'})
-							$(".part_send").css('overflow','')
+						
 							$(".submitBtn.btn_sendPart").css('display','block')
 						})
 						
