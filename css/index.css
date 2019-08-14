@@ -90,7 +90,7 @@ a.mui-pull-left:active{
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	background: #fff;
 	position: relative;
-	/* transition: all 0.3s; */
+	transition: all 0.3s;
 	/* overflow: hidden; */
 	margin-top: 0.4rem;
 }
@@ -425,4 +425,69 @@ a.mui-pull-left:active{
 .recipientInfo.goods{
 	margin-top: 0.21rem;
 	background: #fff;
+}
+
+/* 物品 */
+.part_goods{
+	margin-top: 0.2rem;
+	background: #fff;
+	padding-bottom: 0.84rem;
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	background: #fff;
+	position: relative;
+	height: 1.03rem;
+	/* overflow: hidden; */
+	transition: all 0.3s;
+	
+}
+.recipient_titile.part_goods_title{
+	display: none;
+}
+.part_goods_close{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	
+}
+.recipient_titile input.searchBrandName{
+	width: 5.8rem;
+	height: 0.55rem;
+	background: rgb(238,238,238);
+	border: none;
+	padding: 0;
+	padding-left: 0.2rem;
+	margin: 0 0.58rem 0 0.28rem;
+	font-size: 0.24rem;
+}
+.goodsInfo{
+	width: 100%;
+	border-top: 0.05rem solid #E1E3E2;
+	border-bottom: 0.05rem solid #E1E3E2;
+	height: 1.25rem;
+	background: rgb(242,242,242);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.goodsInfo div{
+	height: 1.25rem;
+	width: 50%;
+	font-size: 0.3rem;
+	color: rgb(121,120,120);
+	text-align: center;
+	line-height: 1.25rem;
+}
+.noGoods{
+	width: 100%;
+	height: 3.07rem;
+	padding-top: 0.7rem;
+}
+.noGoods img{
+	width: 1.53rem;
+	height: 1.44rem;
+	display: block;
+	margin: 0 auto;
 }
