@@ -42,7 +42,7 @@
 				</header>
 	
 				<!-- 主页面内容容器 -->
-				<div class="mui-content mui-scroll-wrapper" style="overflow: scroll;">
+				<div class="mui-content mui-scroll-wrapper" >
 					<div class="mui-scroll">
 						<div class="part_recipient">
 								<div class="recipientInfo">
@@ -180,6 +180,9 @@
 		
 		 <script type="text/javascript" charset="utf-8">
 			 $(function(){
+				 mui('.mui-scroll-wrapper').scroll({
+					deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+					});
 				 	$(".part_send").css('overflow','hidden')
 			 })
 
