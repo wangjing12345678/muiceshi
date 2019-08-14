@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
     <script src="js/mui.min.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
+	<link rel="stylesheet" href="css/mui.picker.css">
+	<link rel="stylesheet" href="css/mui.poppicker.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/rem.js"></script>
+   
 </head>
 <body>
 	<!-- 主界面菜单同时移动 -->
@@ -28,36 +32,144 @@
 				<!-- 主页面标题 -->
 				<header class="mui-bar mui-bar-nav">
 					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
-					<h1 class="mui-title">标题</h1>
+					<div class="analysis animated">
+						<div class="analysis_title">解析</div>
+					</div>
+					<div class="analysis_icon"><img src="./image/analysis.png" alt=""></div>
 				</header>
-				<nav class="mui-bar mui-bar-tab">
-					<a class="mui-tab-item mui-active">
-						<span class="mui-icon mui-icon-home"></span>
-						<span class="mui-tab-label">首页</span>
-					</a>
-					<a class="mui-tab-item">
-						<span class="mui-icon mui-icon-phone"></span>
-						<span class="mui-tab-label">电话</span>
-					</a>
-					<a class="mui-tab-item">
-						<span class="mui-icon mui-icon-email"></span>
-						<span class="mui-tab-label">邮件</span>
-					</a>
-					<a class="mui-tab-item">
-						<span class="mui-icon mui-icon-gear"></span>
-						<span class="mui-tab-label">设置</span>
-					</a>
-				</nav>
+	
 				<!-- 主页面内容容器 -->
 				<div class="mui-content mui-scroll-wrapper">
 					<div class="mui-scroll">
-						<!-- 主界面具体展示内容 -->
+						<div class="part_recipient">
+							<div class="recipientInfo">
+								<div class="recipient_titile">
+									<div class="clearfix">
+										<div class="collect_part">收</div>
+										<div class="recipient">收件人</div>
+									</div>
+									<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
+									<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+									
+								</div>
+							</div>
+							<div class="messageBox">
+								<div class="name"><label>姓名</label><input type="text"></div>
+								<div class="phone"><label>电话</label><input type="text"></div>
+							</div>
+							<div class="messageBox">
+								<div class="province"><label>省/市</label><input type="text"></div>
+								<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+							</div>
+							<div class="messageBox">
+								<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
+							</div>
+							<div class="saveToAddress">
+								<div class="selectSave">
+									
+									<span></span>
+									<div>保存到地址簿</div>
+									
+								</div>
+								<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
+								
+							</div>
+							<img src="image/submit.png" alt="" class="submitBtn">
+						</div>
+						
+						<div class="recipientInfo send">
+							<div class="recipient_titile">
+								<div class="clearfix">
+									<div class="collect_part">寄</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="recipientInfo goods">
+							<div class="recipient_titile">
+								<div class="clearfix">
+									<div class="collect_part">物</div>
+									
+								</div>
+							</div>
+						</div>
+						
 						
 					</div>
 				</div>
 		   	 <div class="mui-off-canvas-backdrop"></div>
 			</div>
+			
+			
 		</div>
+		
+		<script type="text/javascript" src="js/mui.picker.js"></script>
+		<script type="text/javascript" src="js/mui.poppicker.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+		  	mui.init();
+			$(".analysis_icon").on('tap',function(){
+				$(".analysis").css('display','block')
+				$(".analysis").addClass("slideInRight")
+			})
+		
+			
+					var cityData3 = {
+						
+							value: '130000',
+							text: '河北省',
+							children: [{
+								value: "130100",
+								text: "石家庄市",
+								children: [{
+									value: "130102",
+									text: "长安区"
+								}, {
+									value: "130103",
+									text: "桥东区"
+								}, {
+									value: "130104",
+									text: "桥西区"
+								}]
+							}]
+					}
+					var picker = new mui.PopPicker({
+							layer: 2
+						});
+							picker.setData([{
+								value: '110000',
+								text: '北京市',
+								children: [{
+										value: "110101",
+										text: "东城区"
+								}]
+							}, {
+								value: '120000',
+								text: '天津市',
+								children: [{
+									value: "120101",
+									text: "和平区"
+								}, {
+									value: "120102",
+									text: "河东区"
+								}, {
+									value: "120104",
+									text: "南开区"
+								}
+								]
+							}])
+							$("#showCityPicker3").on('tap',function(){
+								picker.show(function(SelectedItem) {
+									console.log(SelectedItem);
+								})
+							})
+						// picker.pickers[0].setSelectedIndex(1);
+						// picker.pickers[1].setSelectedIndex(1);
+						
+	
+		</script> 
 	
 </body>
+
+
 </html>
