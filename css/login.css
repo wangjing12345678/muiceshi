@@ -1,0 +1,82 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.clearfix:after{
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+.logo{
+	width: 4.04rem;
+	height: 0.61rem;
+	margin: 1.9rem auto 0;
+	
+}
+.logo img{
+	width: 4.04rem;
+	height: 0.61rem;
+}
+.dataBox{
+	width: 5rem;
+	margin: 1.44rem auto 0;
+	
+}
+.dataBox input{
+	width: 5rem;
+	height: 0.7rem;
+	border-radius: 0.3rem;
+	background: rgb(246,233,235);
+	/* margin-bottom: 0.43rem; */
+	border:none
+}
+.submit{
+	width: 5rem;
+	height: 0.7rem;
+	border-radius: 0.3rem;
+	background: rgb(229,64,83);
+	margin-bottom: 0.43rem;
+	border:none;
+	color: #fff;
+	font-size: 0.36rem;
+}
+.btnBox{
+	width: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.56rem auto 0;
+}
+.btnBox .forget{
+	width: 1.5rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: rgb(136,131,131);
+	border-right:  0.01rem solid rgb(181,181,181);
+	
+}
+.btnBox .register{
+	width: 1.5rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: rgb(229,64,83);
+}	
+.anotherLoginMethod{
+	/* width: 100%; */
+	margin: 0.72rem 0.18rem 0;
+	border-bottom: 0.01rem solid rgb(220,220,220);
+	color: rgb(204,204,206);
+	font-size: 0.24rem;
+	text-align: center;
+	line-height: 0.48rem;
+}
+.wechat{
+	width: 0.86rem;
+	height: 0.86rem;
+	display: block;
+	margin: 0.34rem auto;
+}

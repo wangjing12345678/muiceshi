@@ -39,14 +39,14 @@ a.mui-pull-left:active{
 
 	position: absolute;
 	top: 0;
-	left: 5.6rem;
+	left: 5.62rem;
 	/* visibility: hidden; */
 	transition: all 0.2s;
 	
 }
 .analysis{
-	width: 5.6rem;
-	height: 1rem;
+	width: 5.62rem;
+	height: 1.02rem;
 	overflow: hidden;
 	margin-left: 0.8rem;
 	margin-top: 0.08rem;
@@ -90,6 +90,7 @@ a.mui-pull-left:active{
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	background: #fff;
 	position: relative;
+	/* transition: all 0.3s; */
 	/* overflow: hidden; */
 	margin-top: 0.4rem;
 }
@@ -98,11 +99,51 @@ a.mui-pull-left:active{
 	border-bottom: 0.05rem solid rgb(225,227,226);
 	
 }
-.close{
-	background: red;
-	display: none;
+.part_rec_close{
 	width: 100%;
 	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	display: none;
+}
+.messageBody{
+	width: 5.5rem;
+	height: 0.87rem;
+	padding-top: 0.1rem;
+	/* background: red; */
+}
+.editMessage{
+	width: 0.22rem;
+	height: 0.22rem;
+
+	margin-right: 0.6rem;
+}
+.messageBody div{
+	height: 0.35rem;
+}
+.messageBody div.messageBody_name{
+	width: 1.5rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+
+}
+.messageBody div.messageBody_phone{
+	width: 3.8rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+	margin-left: 0.1rem;
+}
+.messageBody div.messageBody_address{
+	width: 5.5rem;
+	color: rgb(112,112,112);
+	font-size: 0.28rem;
+
 }
 .recipient_titile{
 	width: 100%;
@@ -110,7 +151,6 @@ a.mui-pull-left:active{
 	display: flex;
     justify-content: space-between;
 	align-items: center;
-
 	background: #fff;
 	
 }
@@ -118,7 +158,7 @@ a.mui-pull-left:active{
 	width: 0.9rem;
 	height: 0.5rem;
 	border-radius: 0.16rem;
-	background-color: rgb(229,64,83);
+	background-color: #393939;
 	text-align: right;
 	padding-right: 0.16rem;
 	line-height: 0.5rem;
@@ -341,10 +381,43 @@ a.mui-pull-left:active{
 }
 
 /* 寄东西 */
+.part_send{
+	margin-top: 0.95rem;
+	background: #fff;
+	padding-bottom: 0.84rem;
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	background: #fff;
+	position: relative;
+	height: 1.03rem;
+	/* overflow: hidden; */
+	transition: all 0.3s;
+	/* overflow: hidden; */
+
+}
 .recipientInfo.send{
 	margin-top: 0.95rem;
 	background: #fff;
 	
+	
+}
+.recipient_titile.part_send_title{
+	display: none;
+}
+.submitBtn.btn_sendPart{
+	display: none;
+	
+}
+.part_send_close{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+
+}
+.collect_part.active{
+		background-color: rgb(229,64,83);
 }
 .recipientInfo.send .collect_part,.recipientInfo.goods .collect_part{
 	background: #393939;

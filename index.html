@@ -42,21 +42,33 @@
 				</header>
 	
 				<!-- 主页面内容容器 -->
-				<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-content mui-scroll-wrapper" style="overflow: scroll;">
 					<div class="mui-scroll">
 						<div class="part_recipient">
 								<div class="recipientInfo">
 									<div class="recipient_titile part_rec">
-										
 											<div class="clearfix">
-												<div class="collect_part">收</div>
+												<div class="collect_part active">收</div>
 												<div class="recipient">收件人</div>
 											</div>
 											<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
 											<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
 			
 									</div>
-									<div class="close"></div>
+									<div class="part_rec_close">
+										<div class="clearfix">
+											<div class="collect_part">收</div>
+										</div>
+										<div class="messageBody">
+											<div class="messageBody_name">11111</div>
+											<div class="messageBody_phone">45</div>
+											<div class="messageBody_address">15646486</div>
+											
+										</div>
+										<div class="editMessage"><img src="" alt=""></div>
+									
+										
+									</div>
 								</div>
 								<div class="messageBox">
 									<div class="name"><label>姓名</label><input type="text"></div>
@@ -85,14 +97,66 @@
 							
 						</div>
 						
-						<div class="recipientInfo send ">
-							<div class="recipient_titile clickOpen">
+						<!-- <div class="recipientInfo send "> -->
+							<!-- <div class="recipient_titile clickOpen">
 								<div class="clearfix">
 									<div class="collect_part">寄</div>
 									
 								</div>
+							</div> -->
+							<div class="part_send">
+									<div class="recipientInfo">
+										<div class="recipient_titile part_send_title clickOpen">
+												<div class="clearfix">
+													<div class="collect_part active">寄</div>
+													<div class="recipient">收件人</div>
+												</div>
+												<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
+												<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+										
+										</div>
+										<div class="part_send_close closeActive">
+											<div class="clearfix">
+												<div class="collect_part">寄</div>
+											</div>
+											<div class="messageBody">
+												<div class="messageBody_name">11111</div>
+												<div class="messageBody_phone">45</div>
+												<div class="messageBody_address">15646486</div>
+												
+											</div>
+											<div class="editMessage"><img src="" alt=""></div>
+										
+											
+										</div>
+									</div>
+									<div class="messageBox">
+										<div class="name"><label>姓名</label><input type="text"></div>
+										<div class="phone"><label>电话</label><input type="text"></div>
+									</div>
+									<div class="messageBox">
+										<div class="province"><label>省/市</label><input type="text"></div>
+										<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+									</div>
+									<div class="messageBox">
+										<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
+									</div>
+									<div class="saveToAddress">
+										<div class="selectSave">
+											
+											<span></span>
+											<div>保存到地址簿</div>
+											
+										</div>
+										<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
+										
+									</div>
+									<img src="image/submit.png" alt="" class="submitBtn btn_sendPart">
+												
+								
+								
 							</div>
-						</div>
+						<!-- </div> -->
 						<div class="recipientInfo goods">
 							<div class="recipient_titile">
 								<div class="clearfix">
@@ -115,6 +179,8 @@
 		<script type="text/javascript" src="js/mui.poppicker.js"></script>
 		
 		 <script type="text/javascript" charset="utf-8">
+
+
 		  	mui.init();
 			$(".analysis_icon").on('tap',function(){
 				$(".analysis_body").css('left','0')
@@ -174,21 +240,42 @@
 						// picker.pickers[0].setSelectedIndex(1);
 						// picker.pickers[1].setSelectedIndex(1);
 						
-						mui(".recipientInfo.send").on('tap','.recipient_titile.clickOpen',function(){
+						mui(".part_send").on('tap','.part_send_close',function(){
 							$(".part_rec").css('display','none')
-							$(".close").css('display','block')
+							$(".part_rec_close").css('display','flex')
 							$(".part_recipient").css('overflow','hidden')
 							$(".submitBtn").css('display','none')
-							$(".part_recipient").animate({height:'1.03rem'},500)
-							$(".recipientInfo.send .recipient_titile").removeClass('clickOpen')
-							$(".recipientInfo.send .recipient_titile").addClass("clickClose")
-								
-					
+							$(".part_recipient").animate({height:'1.03rem'},300)
+							// $(".recipientInfo.send .recipient_titile").removeClass('clickOpen')
+							// $(".recipientInfo.send .recipient_titile").addClass("clickClose")
+							$(".part_send").css({'margin-top':'0.2rem'})	
+							$(".part_send").css({'height':'auto'})
+							$(".part_send_close").css('display','none')
+							$(".recipient_titile.part_send_title").css('display','flex')
+							$(".part_send").css({'margin-bottom':'0.95rem'})
+							$(".part_send").css('overflow','')
+							$(".submitBtn.btn_sendPart").css('display','block')
 						})
-					mui(".recipientInfo.send").on('tap','.recipient_titile.clickClose',function(){
-							console.log('open')
-						 }
-						)
+						
+						mui(".part_recipient").on('tap',".part_rec_close",function(){
+							$(".part_rec").css('display','flex')
+							$(".part_rec_close").css('display','none')
+							$(".submitBtn").css('display','block')
+							$(".part_recipient").css('height','auto')
+							$(".part_recipient").css('overflow','')
+							// $(".part_recipient").animate({height:'auto'},300)
+							$(".part_send").css({'margin-top':'0.95rem'})	
+							$(".part_send").css({'height':'1.03rem'})
+							$(".part_send_close").css('display','flex')
+							$(".recipient_titile.part_send_title").css('display','none')
+							$(".part_send").css({'margin-bottom':'0.2rem'})
+							$(".submitBtn.btn_sendPart").css('display','none')
+							$(".part_send").css('overflow','hidden')
+						})
+					// mui(".recipientInfo.send").on('tap','.recipient_titile.clickClose',function(){
+					// 		console.log('open')
+					// 	 }
+					// 	)
 	
 		</script> 
 	
