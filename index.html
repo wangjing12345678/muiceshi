@@ -32,8 +32,11 @@
 				<!-- 主页面标题 -->
 				<header class="mui-bar mui-bar-nav">
 					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
-					<div class="analysis animated">
-						<div class="analysis_title">解析</div>
+					<div class="analysis">
+						<div class="analysis_body">
+							<div class="analysis_title">解析</div>
+						</div>
+						
 					</div>
 					<div class="analysis_icon"><img src="./image/analysis.png" alt=""></div>
 				</header>
@@ -42,43 +45,48 @@
 				<div class="mui-content mui-scroll-wrapper">
 					<div class="mui-scroll">
 						<div class="part_recipient">
-							<div class="recipientInfo">
-								<div class="recipient_titile">
-									<div class="clearfix">
-										<div class="collect_part">收</div>
-										<div class="recipient">收件人</div>
+								<div class="recipientInfo">
+									<div class="recipient_titile part_rec">
+										
+											<div class="clearfix">
+												<div class="collect_part">收</div>
+												<div class="recipient">收件人</div>
+											</div>
+											<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
+											<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+			
 									</div>
-									<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
-									<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+									<div class="close"></div>
+								</div>
+								<div class="messageBox">
+									<div class="name"><label>姓名</label><input type="text"></div>
+									<div class="phone"><label>电话</label><input type="text"></div>
+								</div>
+								<div class="messageBox">
+									<div class="province"><label>省/市</label><input type="text"></div>
+									<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+								</div>
+								<div class="messageBox">
+									<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
+								</div>
+								<div class="saveToAddress">
+									<div class="selectSave">
+										
+										<span></span>
+										<div>保存到地址簿</div>
+										
+									</div>
+									<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
 									
 								</div>
-							</div>
-							<div class="messageBox">
-								<div class="name"><label>姓名</label><input type="text"></div>
-								<div class="phone"><label>电话</label><input type="text"></div>
-							</div>
-							<div class="messageBox">
-								<div class="province"><label>省/市</label><input type="text"></div>
-								<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
-							</div>
-							<div class="messageBox">
-								<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
-							</div>
-							<div class="saveToAddress">
-								<div class="selectSave">
-									
-									<span></span>
-									<div>保存到地址簿</div>
-									
-								</div>
-								<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
-								
-							</div>
-							<img src="image/submit.png" alt="" class="submitBtn">
+								<img src="image/submit.png" alt="" class="submitBtn">
+					
+							
+							
 						</div>
 						
-						<div class="recipientInfo send">
-							<div class="recipient_titile">
+						<div class="recipientInfo send ">
+							<div class="recipient_titile clickOpen">
 								<div class="clearfix">
 									<div class="collect_part">寄</div>
 									
@@ -109,8 +117,8 @@
 		 <script type="text/javascript" charset="utf-8">
 		  	mui.init();
 			$(".analysis_icon").on('tap',function(){
-				$(".analysis").css('display','block')
-				$(".analysis").addClass("slideInRight")
+				$(".analysis_body").css('left','0')
+				
 			})
 		
 			
@@ -166,6 +174,21 @@
 						// picker.pickers[0].setSelectedIndex(1);
 						// picker.pickers[1].setSelectedIndex(1);
 						
+						mui(".recipientInfo.send").on('tap','.recipient_titile.clickOpen',function(){
+							$(".part_rec").css('display','none')
+							$(".close").css('display','block')
+							$(".part_recipient").css('overflow','hidden')
+							$(".submitBtn").css('display','none')
+							$(".part_recipient").animate({height:'1.03rem'},500)
+							$(".recipientInfo.send .recipient_titile").removeClass('clickOpen')
+							$(".recipientInfo.send .recipient_titile").addClass("clickClose")
+								
+					
+						})
+					mui(".recipientInfo.send").on('tap','.recipient_titile.clickClose',function(){
+							console.log('open')
+						 }
+						)
 	
 		</script> 
 	
