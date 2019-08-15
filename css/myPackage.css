@@ -1,0 +1,179 @@
+
+.mui-bar{
+	height: 1.25rem;
+	position: relative;
+	background: rgb(242,242,242);
+	border-top: 0.05rem solid rgb(225,227,226);
+	border-bottom: 0.05rem solid rgb(225,227,226);
+}
+.mui-bar-nav.mui-bar .mui-icon{
+	color:rgb(126,125,125) ;
+	font-weight: bold;
+	padding: 0;
+	margin-top: 0.35rem;
+	padding-left: 0.42rem;
+	/* text-shadow: -0.03rem 0.03rem 0.04rem 0 rgba(0,0,0,0.3); */
+}
+
+a.mui-pull-left:active{
+	color: red;
+}
+
+.analysis{
+	width: 5.62rem;
+	height: 1.02rem;
+	overflow: hidden;
+	margin-left: 0.8rem;
+	margin-top: 0.08rem;
+	position: relative;
+	text-align: center;
+	line-height: 1rem;
+	color: rgb(78,78,78);
+	font-size: 0.36rem;
+	
+}
+
+.analysis_icon{
+	width: 0.45rem;
+	height: 0.45rem;
+	position: absolute;
+	right: 0.34rem;
+	top: 0.35rem;
+	padding: 0;
+	margin: 0;
+	
+}
+.analysis_icon img{
+	width: 0.45rem;
+	height: 0.45rem;
+}
+
+/* 菜单tab */
+.package_tab{
+	width: 100%;
+	height: 0.95rem;
+	border-top:0.08rem solid #E1E3E2;
+	border-bottom:0.08rem solid #E1E3E2;
+	background: #f2f2f2;	
+	margin-top: 0.4rem;
+}
+.package_tab_item{
+	width: 2.5rem;
+	height: 0.83rem;
+	color: rgb(78,78,78);
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.9rem;
+	float: left;
+	
+	
+}
+.package_tab_item.active{
+	box-shadow: 0 0.04rem 0.04rem 0 rgba(0,0,0,0.35);
+}
+
+/* tab列表对应下面内容 */
+/* 待出库 */
+.checkout{
+	width: 100%;
+	/* height: 2.48rem; */
+	background: #fff;
+	padding: 0 0.43rem;
+	position: relative;
+	padding-bottom: 0.25rem;
+}
+.toolBox{
+	width: 100%;
+	padding: 0.25rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.orderNumber{
+	width: 2.9rem;
+	height: 0.38rem;
+	background: rgb(229,64,83);
+	border-radius: 0.1rem;
+	color: #fff;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.38rem;
+}
+.toolBox_btn{
+	width: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.toolBox_btn img.delIcon{
+	width: 0.38rem;
+	height: 0.38rem;
+}
+.toolBox_btn img.editIcon{
+	width: 0.33rem;
+	height: 0.33rem;
+}
+.orderTime{
+	color: rgb(99,99,99);
+	font-size: 0.3rem;
+	
+}
+.sendMessage{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.2rem 0;
+}
+.city_start,.city_end{
+	color: rgb(51,51,51);
+	font-size: 0.36rem;
+}
+.sendMethod{
+	width: 1.87rem;
+	height: 0.05rem;
+	position: relative;
+	margin: 0 0.2rem;
+}
+.sendMethod img{
+	width: 1.87rem;
+	height: 0.05rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.methods_word{
+	position: absolute;
+	top: 0.1rem;
+	left: 0;
+	width: 1.87rem;
+	text-align: center;
+	color: rgb(51,51,51);
+	font-size: 0.26rem;
+}
+.sendName{
+	width: 4.5rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0.2rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.3rem;
+	color: rgb(99,99,99);
+}
+.packageBtn{
+	position: absolute;
+	right: 0.43rem;
+	bottom: 0.4rem;
+	width: 1rem;
+	height: 0.43rem;
+	border: 0.01rem solid #fff;
+	background: rgb(109,106,106);
+	color: #fff;
+	text-align: center;
+	line-height: 0.43rem;
+	border-radius: 0.1rem;
+}

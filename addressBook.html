@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		 <link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/addressBook.css">
+		<script src="js/rem.js"></script>
+	</head>
+	<body>
+		<header class="bar">
+			<div>地址簿</div>
+			<div class="analysis_icon"><img src="./image/search.png" alt=""></div>
+		</header>
+		<div class="content">
+			<div class="package_tab" >
+				<ul class="package_tab_box">
+					<li class="package_tab_item active">收件人</li>
+					<li class="package_tab_item">寄件人</li>
+				</ul>
+			</div>
+			<div class="addressList">
+				<ul class="addressListBox">
+					<li class="addressList_item">
+						<div class="userMessage">
+							<div class="basicMessage">
+								<div class="username">嘎嘎嘎</div>
+								<div class="idcard"><img src="image/idcard_gray.png" alt=""></div>
+								<div class="phone">3546416498</div>
+							</div>
+							<div class="addressCon">哈哈163468496498</div>
+						</div>
+						<div class="editIcon"><img src="image/editIcon.png" alt=""></div>
+						
+					</li>
+				</ul>
+			</div>
+			<button class="addAddress">添加地址 
+			     <a href="#middlePopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block intro_a"><img src="image/idcard_gray.png" alt="" class="intro_idcard"><img src="image/intro.png" alt="" class="intro_ask"></a>
+			</button>
+		</div>
+			<!-- 弹出菜单 -->
+		<div id="middlePopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="goodsIntroTitle">商品信息</div>
+					<ul class="goodsIntoduce">
+						<li class="introItem"> <span>商品名</span> <div>1</div></li>
+						<li class="introItem"> <span>类别</span> <div>2</div></li>
+						<li class="introItem"> <span>品牌</span> <div>3</div></li>
+						<li class="introItem"> <span>规格</span> <div>3</div></li>
+						<li class="introItem"> <span>单价</span> <div>3</div></li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		</div>
+	</body>
+</html>

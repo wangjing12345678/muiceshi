@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+	<!-- 	<link rel="stylesheet" href="css/mui.picker.css">
+		<link rel="stylesheet" href="css/mui.poppicker.css"> -->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/myPackage.css">
+		<script src="js/rem.js"></script>
+	</head>
+	<body>
+		<!-- 主界面菜单同时移动 -->
+			<!-- 侧滑导航根容器 -->
+			<div class="mui-off-canvas-wrap mui-draggable">
+				<!-- 主页面容器 -->
+				<div class="mui-inner-wrap">
+					<!-- 菜单容器 -->
+					<aside class="mui-off-canvas-left" id="offCanvasSide">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<!-- 菜单具体展示内容 -->
+								
+							</div>
+						</div>
+					</aside>
+					<!-- 主页面标题 -->
+					<header class="mui-bar mui-bar-nav">
+						<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+						<div class="analysis">
+								我的包裹
+						
+							
+						</div>
+						<div class="analysis_icon"><img src="./image/search.png" alt=""></div>
+					</header>
+		
+					<!-- 主页面内容容器 -->
+					<div class="mui-content mui-scroll-wrapper">
+						<div class="package_tab" >
+							<ul class="package_tab_box">
+								<li class="package_tab_item active">待出库</li>
+								<li class="package_tab_item">已出库</li>
+								<li class="package_tab_item">问题件</li>
+							</ul>
+						</div>
+						
+						<!-- 菜单对应下面内容 -->
+						<div class="list_content checkout">
+							<div class="toolBox">
+								<div class="orderNumber">
+									1346846464
+									
+								</div>
+								<div class="toolBox_btn">
+									<img src="image/delIcon.png" alt="" class="delIcon">
+									<img src="image/editIcon.png" alt="" class="editIcon">
+								</div>
+							
+							</div>
+							<div class="orderTime">下单时间:2019-8-8 09:10:22</div>
+							<div class="sendMessage">
+								<div class="city_start">dhsiudhu</div>
+								<div class="sendMethod">
+									<img src="image/sendMethod.png" alt="">
+									<div class="methods_word">直邮</div>
+								</div>
+								<div class="city_end">天津</div>
+							</div>
+							<div class="sendName">
+								<div>1465</div>
+								<div>wangjing</div>
+								
+							</div>
+							<div class="packageBtn">打包</div>
+							
+						</div>
+					
+					</div>
+					
+								
+					<div class="mui-off-canvas-backdrop"></div>
+					</div>
+							
+							
+							
+		</div>
+	</body>
+</html>

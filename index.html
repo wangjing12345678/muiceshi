@@ -9,7 +9,8 @@
     <link href="css/mui.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/mui.picker.css">
 	<link rel="stylesheet" href="css/mui.poppicker.css">
-	<link rel="stylesheet" href="css/animate.css">
+	<!-- <link rel="stylesheet" href="css/animate.css"> -->
+	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/rem.js"></script>
 	<script>
@@ -177,7 +178,9 @@
 											<div class="clearfix">
 												<div class="collect_part active">物</div>
 											</div>
-											<input type="text" class="searchBrandName" placeholder="输入品牌名或者物品名">
+											<!-- <input type="text" class="searchBrandName" placeholder="输入品牌名或者物品名" disabled> -->
+											<a href="#middlePopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block searchBrandName">输入品牌名或者物品名</a>
+											
 									
 									</div>
 									<div class="part_goods_close closeActive">
@@ -211,10 +214,39 @@
 						
 					</div>
 				</div>
+				
 		   	 <div class="mui-off-canvas-backdrop"></div>
 			</div>
 			
 			
+			
+		</div>
+		
+		<!-- 弹出菜单 -->
+		<div id="middlePopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="goodsIntroTitle">商品信息</div>
+					<ul class="goodsIntoduce">
+						<li class="introItem"> <span>商品名</span> <div>1</div></li>
+						<li class="introItem"> <span>类别</span> <div>2</div></li>
+						<li class="introItem"> <span>品牌</span> <div>3</div></li>
+						<li class="introItem"> <span>规格</span> <div>3</div></li>
+						<li class="introItem"> <span>单价</span> <div>3</div></li>
+						
+					</ul>
+					<div class="calcCount">
+						<div class="count_title">数量</div>
+						<div class="countNumber"><img src="image/del.png" alt="" class="del"><span class="number">20</span><img src="image/add.png" alt="" class="add"></div>
+					</div>
+					<div class="popover_btn">
+						<div class="popover_close">关闭</div>
+						<div class="popover_add">添加</div>
+					</div>
+				</div>
+			</div>
+		
 		</div>
 		
 		<script type="text/javascript" src="js/mui.picker.js"></script>
@@ -348,6 +380,16 @@
 								$(".recipient_titile.part_goods_title").css('display','flex')
 							
 						})
+						
+						// 物品弹出菜单控制
+						$("#closeWindow").on('click',function(){
+							mui('.mui-popover').popover('hide',document.getElementById("closeWindow"));
+						})
+						mui('body').on('hidden', '.mui-popover', function(e) {
+							console.log('ppp')
+						});
+						
+						
 					
 	
 		</script> 
