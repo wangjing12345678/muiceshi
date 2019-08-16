@@ -29,7 +29,8 @@ a.mui-pull-left:active{
 	top: 0;
 	left: 5.62rem;
 	/* visibility: hidden; */
-	transition: all 0.3s;
+	/* transition: all 0.3s; */
+	/* display: none; */
 	
 }
 .analysis{
@@ -78,7 +79,7 @@ a.mui-pull-left:active{
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	background: #fff;
 	position: relative;
-	transition: all 0.3s;
+	/* transition: all 0.3s; */
 	/* overflow: hidden; */
 	margin-top: 0.4rem;
 }
@@ -378,7 +379,7 @@ a.mui-pull-left:active{
 	position: relative;
 	height: 1.03rem;
 	/* overflow: hidden; */
-	transition: all 0.3s;
+	/* transition: all 0.3s; */
 
 
 }
@@ -425,7 +426,7 @@ a.mui-pull-left:active{
 	position: relative;
 	height: 1.03rem;
 	/* overflow: hidden; */
-	transition: all 0.3s;
+	/* transition: all 0.3s; */
 	
 }
 .recipient_titile.part_goods_title{

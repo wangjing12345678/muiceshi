@@ -229,3 +229,7 @@
 	text-align: left;
 	font-size: 0.3rem;
 }
+.idcard_number{
+	width: 100%;
+	word-break: break-all;
+}
