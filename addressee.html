@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/mui.picker.css">
+		<link rel="stylesheet" href="css/mui.poppicker.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/addressee.css">
+		<script src="js/rem.js"></script>
+	</head>
+	<body>
+		<header class="bar">
+			<div>收件人</div>
+			<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+		</header>
+		<div class="part_recipient">
+				<div class="messageBox">
+					<div class="name"><label>姓名</label><input type="text"></div>
+					<div class="phone"><label>电话</label><input type="text"></div>
+				</div>
+				<div class="messageBox">
+					<div class="province"><label>省/市</label><input type="text"></div>
+					<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+				</div>
+				<div class="messageBox">
+					<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
+				</div>
+				<div class="saveToAddress">
+					<div class="copyWord">
+						<textarea rows="" cols="2" >粘贴如：浙江省绍兴市诸暨市浣东街道西子公寓北区电话：13905857430   张三</textarea>
+					</div>
+					<div class="analysisIcon"><img src="image/analysis.png" alt=""></div>
+					
+				</div>
+				<div class="documentUpload">
+					<div class="document_pic">
+						<div class="document_front">
+							<img src="image/front.png" alt="">
+							<div>点击上传人物面</div>
+						</div>
+						<div class="document_otherSide">
+							<img src="image/otherSide.png" alt="">
+							<div>点击上传国徽面</div>
+						</div>
+					</div>
+					<div class="docMessage">
+						<ul>
+							<li>
+								<div>证件号</div>
+								<input type="text" placeholder="（上传身份证后自动识别）">
+							</li>
+							<li>
+								<div>有效期限</div>
+								<input type="text">
+							</li>
+						</ul>
+					</div>
+					
+					
+				</div>
+			
+							
+			
+			
+		</div>
+			<button class="save">保存</button>
+	</body>
+</html>
+

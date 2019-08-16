@@ -59,7 +59,7 @@ a.mui-pull-left:active{
 }
 .package_tab_item{
 	width: 2.5rem;
-	height: 0.83rem;
+	height: 0.82rem;
 	color: rgb(78,78,78);
 	font-size: 0.3rem;
 	text-align: center;
@@ -69,7 +69,7 @@ a.mui-pull-left:active{
 	
 }
 .package_tab_item.active{
-	box-shadow: 0 0.04rem 0.04rem 0 rgba(0,0,0,0.35);
+	box-shadow: 0 0.02rem 0.04rem 0 rgba(0,0,0,0.35);
 }
 
 /* tab列表对应下面内容 */
@@ -78,9 +78,10 @@ a.mui-pull-left:active{
 	width: 100%;
 	/* height: 2.48rem; */
 	background: #fff;
-	padding: 0 0.43rem;
+	padding: 0 0.43rem ;
 	position: relative;
-	padding-bottom: 0.25rem;
+	padding-bottom: 0.6rem;
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 }
 .toolBox{
 	width: 100%;
@@ -152,7 +153,26 @@ a.mui-pull-left:active{
 	color: rgb(51,51,51);
 	font-size: 0.26rem;
 }
-.sendName{
+.city_start{
+	width: 1.6rem;
+	position: relative;
+	text-align: center;
+}
+.city_end{
+	width: 1.6rem;
+	position: relative;
+	text-align: center;
+}
+.sendName,.addressee{
+	width: 1.6rem;
+	position: absolute;
+	top: 0.46rem;
+	font-size: 0.3rem;
+	color: rgb(99,99,99);
+	text-align: center;
+}
+
+/* .sendName{
 	width: 4.5rem;
 	display: flex;
 	justify-content: flex-start;
@@ -163,7 +183,7 @@ a.mui-pull-left:active{
 	align-items: center;
 	font-size: 0.3rem;
 	color: rgb(99,99,99);
-}
+} */
 .packageBtn{
 	position: absolute;
 	right: 0.43rem;

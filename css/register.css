@@ -21,27 +21,11 @@
 	background: rgb(246,233,235);
 	/* margin-bottom: 0.43rem; */
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	border:none;
 	padding: 0 0.25rem;
 	margin-bottom: 0.48rem;
-}
-.username{
-	position: relative;
-}
-.userType{
-	position: absolute;
-	top: 0.17rem;
-	right: 0.1rem;
-	width: 1.15rem;
-	height: 0.37rem;
-	color: #fff;
-	background: rgb(229,64,83);
-	text-align: center;
-	line-height: 0.37rem;
-	border-radius: 0.16rem;
-	font-size: 0.24rem;
 }
 .username img{
 	width: 0.33rem;
@@ -57,11 +41,7 @@
 	border: 0;
 	outline: none;
 	background: rgba(0,0,0,0);
-	margin-left: 0.3rem;
 	
-}
-.dataBox .username input{
-	width: 2.8rem;
 }
 .submit{
 	width: 5rem;
@@ -94,18 +74,3 @@
 	font-size: 0.24rem;
 	color: rgb(229,64,83);
 }	
-.anotherLoginMethod{
-	/* width: 100%; */
-	margin: 0.72rem 0.18rem 0;
-	border-bottom: 0.01rem solid rgb(220,220,220);
-	color: rgb(204,204,206);
-	font-size: 0.24rem;
-	text-align: center;
-	line-height: 0.48rem;
-}
-.wechat{
-	width: 0.86rem;
-	height: 0.86rem;
-	display: block;
-	margin: 0.34rem auto;
-}

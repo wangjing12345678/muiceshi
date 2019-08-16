@@ -5,6 +5,9 @@
 	text-decoration: none;
 	list-style: none;
 }
+body{
+	background: #efeff4;
+}
 .clearfix:after{
 		content: "";
 		display: block;

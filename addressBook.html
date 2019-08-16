@@ -14,7 +14,10 @@
 	<body>
 		<header class="bar">
 			<div>地址簿</div>
-			<div class="analysis_icon"><img src="./image/search.png" alt=""></div>
+			<div class="analysis_icon">
+				<a href="#searchPopover" id="searchToPropover" class="mui-btn mui-btn-primary mui-btn-block intro_a">
+					<img src="./image/search.png" alt="" ></a>
+				</div>
 		</header>
 		<div class="content">
 			<div class="package_tab" >
@@ -43,7 +46,7 @@
 			     <a href="#middlePopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block intro_a"><img src="image/idcard_gray.png" alt="" class="intro_idcard"><img src="image/intro.png" alt="" class="intro_ask"></a>
 			</button>
 		</div>
-			<!-- 弹出菜单 -->
+			<!-- 底部解释说明弹出菜单 -->
 		<div id="middlePopover" class="mui-popover">
 			<div class="mui-popover-arrow"></div>
 			<div class="mui-scroll-wrapper">
@@ -61,5 +64,40 @@
 			</div>
 		
 		</div>
+		<div id="searchPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="goodsIntoduce">
+						<li class="introItem">
+							<div class="user_intro">
+								<img src="image/idcardFront_small.png" alt="">
+								<img src="image/idcardOtherside_small.png" alt="">
+								<div class="userContent">
+									<div class="userContent_name">
+										<span>555</span>
+										<span>3333</span>
+									</div>
+									<div>13468484648468</div>
+								</div>
+							</div>
+							<div class="idcard_number">111111111111111111111111111111111</div>
+							
+						</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+		</div>
+		
+		<script>
+			 mui.init();
+			 // $("#searchToPropover").on('click',function(){
+			 // 	mui('#searchPopover').popover('show',document.getElementById("searchToPropover"));
+			 // 
+			 // })
+		</script>
 	</body>
 </html>

@@ -4,14 +4,37 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
+		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/login.css">
 		<script src="js/rem.js"></script>
 	</head>
 	<body>
 		<div class="logo"><img src="image/fastgoLogo.png" alt=""></div>
+		<form action="" class="dataBox" style="display: none;">
+			<div class="username">
+				<img src="image/userIcon.png" alt=""><input type="text" class="usernameInput" placeholder="用户名">
+				<div class="userType">个人用户</div>
+			</div>
+			<div class="password">
+				<img src="image/passwordIcon.png" alt=""><input type="text" class="passwordInput" placeholder="密码">
+			</div>
+			<div class="password" style="margin-bottom: 0;">
+				<img src="image/passwordIcon.png" alt=""><input type="text" class="passwordInput" placeholder="再次输入">
+			</div>
+			<button class="submit">登录</button>
+		</form>
 		<form action="" class="dataBox">
-			<input type="text" class="username">
-			<input type="text" class="password">
+			<div class="password">
+				<img src="image/point.png" alt=""><input type="text" class="passwordInput" placeholder="CID">
+			</div>
+			<div class="username">
+				<img src="image/userIcon.png" alt=""><input type="text" class="usernameInput" placeholder="用户名">
+				<div class="userType">网点用户</div>
+			</div>
+			
+			<div class="password" style="margin-bottom: 0;">
+				<img src="image/passwordIcon.png" alt=""><input type="text" class="passwordInput" placeholder="再次输入">
+			</div>
 			<button class="submit">登录</button>
 		</form>
 		<div class="btnBox">

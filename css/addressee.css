@@ -1,0 +1,306 @@
+.bar{
+	width: 100%;
+	height: 1.25rem;
+	position: relative;
+	background: rgb(242,242,242);
+	border-top: 0.05rem solid rgb(225,227,226);
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	padding: 0 0.42rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.36rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+}
+
+.address{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1.3rem;
+	height: 0.4rem;
+	text-align: center;
+	line-height: 0.3rem;
+	background: rgb(89,87,87);
+	border-radius: 0.08rem;
+	padding: 0 0.1rem;
+	
+}
+.address img{
+	width: 0.28rem;
+	height: 0.3rem;
+	margin-right: 0.1rem;
+}
+
+.address span{
+   display: inline-block;
+   text-align: center;
+   line-height: 0.32rem;
+   font-size: 0.22rem;
+   color: #fff;
+}
+/* 菜单tab */
+/* 中间收件人部分 */
+.part_recipient{
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	background: #fff;
+	position: relative;
+	
+}
+.recipientInfo{
+	width: 100%;
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	
+}
+.part_rec_close{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	display: none;
+}
+.messageBody{
+	width: 5.5rem;
+	height: 0.87rem;
+	padding-top: 0.1rem;
+	/* background: red; */
+}
+.editMessage{
+	width: 0.22rem;
+	height: 0.22rem;
+
+	margin-right: 0.6rem;
+}
+.messageBody div{
+	height: 0.35rem;
+}
+.messageBody div.messageBody_name{
+	width: 1.5rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+
+}
+.messageBody div.messageBody_phone{
+	width: 3.8rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+	margin-left: 0.1rem;
+}
+.messageBody div.messageBody_address{
+	width: 5.5rem;
+	color: rgb(112,112,112);
+	font-size: 0.28rem;
+
+}
+
+.messageBox{
+	width: 100%;
+	height: 1rem;
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	padding: 0 0.25rem;
+	background: #fff;
+}
+.messageBox div{
+	width: 50%;
+	float: left;
+	display: flex;
+	justify-content: space-between;align-items: center;
+	height: 1rem;
+	
+}
+.messageBox div label{
+	font-weight: bold;
+}
+.messageBox div input{
+	width: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border:none
+}
+.messageBox div.name{
+	border-right: 0.05rem solid rgb(225,227,226);
+	padding-right: 0.2rem;
+
+
+	
+}
+.messageBox div.phone{
+	padding-left: 0.3rem;
+}
+.messageBox div.phone label{
+	margin-right: 0.06rem;
+}
+.messageBox div label{
+	font-size: 0.3rem;
+	color: rgb(121,120,120);
+	
+	
+}
+.messageBox div.province{
+	border-right: 0.05rem solid rgb(225,227,226);
+	width: 85%;
+}
+.messageBox div.pickerBox{
+	width: 15%;
+	position: relative;
+}
+.pickerBox button{
+	border: none;
+	/* width: 100%; */
+	/* height: 0.2rem; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pickerBox button img{
+	width: 0.38rem;
+	height: 0.2rem;
+	
+}
+#showCityPicker3{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	border-radius: none;
+	width: 1.3rem;
+	height: 1rem;
+	background: rgba(0,0,0,0);
+	
+}
+.mui-btn-blue, .mui-btn-primary, input[type=submit]{
+	background-color: rgb(229,64,83);
+	border: 0.01rem solid rgb(229,64,83);
+	
+}
+.mui-poppicker-body{
+	background: #fff;
+}
+.mui-picker{
+	background: #fff;
+}
+.messageBox div.address_detail{
+	width: 100%;
+}
+.messageBox div.address_detail input{
+	width: 5.5rem;
+}
+.saveToAddress{
+	width: 100%;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.3rem 0.4rem;
+	border-bottom: 0.05rem solid #E1E3E2;
+	
+}
+.copyWord{
+	width: 6rem;
+	height: 1.2rem;
+	background: rgb(229,229,229);
+	padding: 0.23rem;
+}
+.copyWord textarea{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: rgba(0,0,0,0);
+	font-size: 0.24rem;
+	word-break: break-all;
+	color: rgb(146,143,143);
+}
+.analysisIcon{
+	width: 0.37rem;
+	height: 0.46rem;
+}
+.analysisIcon img{
+	width: 0.37rem;
+	height: 0.46rem;
+}
+/* 证件上传 */
+.documentUpload{
+	width: 100%;
+	padding: 0.4rem 0.4rem 0;
+}
+.document_pic{
+	width: 5rem;
+	height: 1.76rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
+.document_front img,.document_otherSide img{
+	width: 1.71rem;
+	height: 1.3rem;
+}
+.document_front div,.document_otherSide div{
+	font-size: 0.24rem;
+	color: rgb(185,183,183);
+	width: 1.71rem;
+	text-align: center;
+	margin-top: 0.1rem;
+}
+.docMessage{
+	width: 100%;
+	padding: 0 0.4rem;
+	margin-top: 0.4rem;
+	padding-bottom: 0.53rem;
+
+}
+.docMessage ul{
+	width: 100%;
+}
+.docMessage ul li{
+	width: 100%;
+	height: 0.7rem;
+	border-bottom: 0.01rem solid #E1E3E2;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.docMessage ul li div{
+	color: rgb(121,120,120);
+	font-size: 0.28rem;
+	/* width: 1.4rem; */
+	width: auto;
+	line-height: 0.6rem;
+	/* font-weight: bold; */
+}
+.docMessage ul li input{
+	width: 4.6rem;
+
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 0.6rem;
+	padding-left: 0.2rem;
+	color: rgb(121,120,120);
+}
+.save{
+	width: 2.78rem;
+	height: 0.66rem;
+	background: rgb(229,64,83);
+	color: #fff;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.66rem;
+	padding: 0;
+	margin: 0.4rem auto;
+	display: block;
+	border: none;
+	border-radius: 0.15rem;
+}

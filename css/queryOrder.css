@@ -1,0 +1,164 @@
+header{
+	width: 100%;
+	height: 2.03rem;
+	background: rgb(242,242,242);
+	padding-top: 0.56rem;
+	
+}
+header img{
+	width: 4.04rem;
+	height: 0.61rem;
+	margin: 0 auto;
+	display: block;
+}
+.searchBox{
+	width: 100%;
+	height: 0.5rem;
+	background: #E1E3E2;
+	position: relative;
+}
+.search{
+	width: 6.18rem;
+	height: 0.7rem;
+	background: #fff;
+	box-shadow:  0 0.03rem 0.07rem 0 rgba(0,0,0,0.35);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: -0.35rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.16rem;
+}
+.queryIcon{
+	width: 0.33rem;
+	height: 0.4rem;
+	position: relative;
+}
+.queryIcon img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0.33rem;
+	height: 0.4rem;
+}
+.queryInput{
+	width: 4.3rem;
+	height: 0.6rem;
+	border: 0;
+	font-size: 0.3rem;
+}
+.queryBtn{
+	width: 0.9rem;
+	height: 0.53rem;
+	background: rgb(51,51,51);
+	color: #fff;
+	text-align: center;
+	line-height: 0.53rem;
+	font-size: 0.3rem;
+	border-radius: 0.05rem;
+}
+.checkout{
+	width: 100%;
+	/* height: 2.48rem; */
+	background: #fff;
+	padding: 0 0.29rem ;
+	position: relative;
+	padding-bottom: 0.6rem;
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+}
+.toolBox{
+	width: 100%;
+	padding: 0.15rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.orderNumber{
+	width: 2.9rem;
+	height: 0.38rem;
+	background: rgb(229,64,83);
+	border-radius: 0.1rem;
+	color: #fff;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.38rem;
+}
+.toolBox_btn{
+	width: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.toolBox_btn img.delIcon{
+	width: 0.38rem;
+	height: 0.38rem;
+}
+.toolBox_btn img.editIcon{
+	width: 0.33rem;
+	height: 0.33rem;
+}
+.orderTime{
+	color: rgb(99,99,99);
+	font-size: 0.24rem;
+	width: 3.43rem;
+	
+}
+.sendMessage{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.city_start,.city_end{
+	color: rgb(51,51,51);
+	font-size: 0.36rem;
+}
+.sendMethod{
+	width: 1.87rem;
+	height: 0.05rem;
+	position: relative;
+
+}
+.sendMethod img{
+	width: 1.87rem;
+	height: 0.05rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.methods_word{
+	position: absolute;
+	top: 0.1rem;
+	left: 0;
+	width: 1.87rem;
+	text-align: center;
+	color: rgb(51,51,51);
+	font-size: 0.26rem;
+}
+.city_start{
+	padding: 0 0.2rem;
+	position: relative;
+	text-align: center;
+}
+.city_end{
+	padding: 0 0.2rem;
+	position: relative;
+	text-align: center;
+}
+.sendName,.addressee{
+	/* width: 1.6rem; */
+	position: absolute;
+	
+	font-size: 0.3rem;
+	color: rgb(99,99,99);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 0.46rem;
+
+}

@@ -179,7 +179,7 @@
 												<div class="collect_part active">物</div>
 											</div>
 											<!-- <input type="text" class="searchBrandName" placeholder="输入品牌名或者物品名" disabled> -->
-											<a href="#middlePopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block searchBrandName">输入品牌名或者物品名</a>
+											<a href="#goodsPopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block searchBrandName">输入品牌名或者物品名</a>
 											
 									
 									</div>
@@ -222,7 +222,18 @@
 			
 		</div>
 		
-		<!-- 弹出菜单 -->
+		<!-- 搜索商品弹出菜单 -->
+		<div id="goodsPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="diji">kjoo</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- 商品信息弹出菜单  修改商品数量 -->
 		<div id="middlePopover" class="mui-popover">
 			<div class="mui-popover-arrow"></div>
 			<div class="mui-scroll-wrapper">
@@ -382,8 +393,10 @@
 						})
 						
 						// 物品弹出菜单控制
-						$("#closeWindow").on('click',function(){
-							mui('.mui-popover').popover('hide',document.getElementById("closeWindow"));
+						$(".diji").on('click',function(){
+							mui('#goodsPopover').popover('hide',document.getElementById("closeWindow"));
+							mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
+						
 						})
 						mui('body').on('hidden', '.mui-popover', function(e) {
 							console.log('ppp')
