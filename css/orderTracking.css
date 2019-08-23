@@ -1,0 +1,310 @@
+.mui-bar{
+	height: 1.25rem;
+	background: rgb(242,242,242);
+	border-top: 0.05rem solid rgb(225,227,226);
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mui-bar-nav.mui-bar .mui-icon{
+	color:rgb(126,125,125) ;
+	font-weight: bold;
+	padding: 0;
+	padding-left: 0.42rem;
+	/* text-shadow: -0.03rem 0.03rem 0.04rem 0 rgba(0,0,0,0.3); */
+}
+
+a.mui-pull-left:active{
+	color: red;
+}
+.analysis{
+	width: 5.1rem;
+	height: 1.02rem;
+	overflow: hidden;
+	margin-left: 0.8rem;
+	position: relative;
+	text-align: center;
+	line-height: 1rem;
+	color: rgb(78,78,78);
+	font-size: 0.36rem;
+	
+}
+
+.analysis_icon{
+	width: 1.14rem;
+	height: 0.92rem;
+	padding: 0;
+	margin: 0;
+	
+}
+.analysis_icon img{
+	width: 1.14rem;
+	height: 0.92rem;
+}
+/* 中间收件人部分 */
+.part_recipient,.part_send,.part_goods,.part_pic{
+	padding-bottom: 0.84rem;
+	/* box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3); */
+	background: #fff;
+	position: relative;
+	height: 1.07rem;
+	/* transition: all 0.3s; */
+	/* overflow: hidden; */
+	margin-top: 0.4rem;
+}
+.recipientInfo{
+	width: 100%;
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	
+}
+.part_rec_close{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	/* display: none; */
+}
+.messageBody{
+	width: 5rem;
+	height: 0.87rem;
+	padding-top: 0.1rem;
+	/* background: red; */
+}
+.uploadIdcard{
+	width: 1.2rem;
+	height: 0.42rem;
+	background: rgb(229,64,83);
+	border: 0.01rem solid #fff;
+	margin-right: 0.3rem;
+	box-shadow: 0 0.03rem 0.07rem 0 rgba(0,0,0,0.4);
+	color: #fff;
+	text-align: center;
+	line-height: 0.4rem;
+	font-size: 0.22rem;
+	border-radius: 0.05rem;
+}
+.messageBody div{
+	height: 0.35rem;
+}
+.messageBody div.messageBody_name{
+	width: 1.5rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+
+}
+.messageBody div.messageBody_phone{
+	width: 3.3rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	font-weight: bold;
+	margin-left: 0.1rem;
+}
+.messageBody div.messageBody_address{
+	width: 5rem;
+	color: rgb(112,112,112);
+	font-size: 0.28rem;
+
+}
+.recipient_titile{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	
+}
+.collect_part{
+	width: 0.9rem;
+	height: 0.5rem;
+	border-radius: 0.16rem;
+	background-color: #393939;
+	text-align: right;
+	padding-right: 0.16rem;
+	line-height: 0.5rem;
+	font-size: 0.3rem;
+	color: #fff;
+	margin-left: -0.2rem;
+	float: left;
+	font-weight: bold;
+
+}
+/* 寄东西 */
+.part_send{
+	margin-top: 0;
+}
+.part_send .uploadIdcard{
+	background: #fff;
+	box-shadow: none;
+	border: none;
+}
+/* 物品 */
+.part_goods{
+	padding-bottom: 0;
+	height: auto;
+	margin-top: 0;
+}
+.part_sendTitle{
+	width: 100%;
+	height: 1.25rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(242,242,242);
+}
+.goodsName{
+	width: 4.3rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	text-align: center;
+}
+.goodsCount{
+	width: 1rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+}
+.goodsList,.goodsListBody{
+	width: 100%;
+	background: #fff;
+}
+.goodsList{
+	border-bottom: 0.05rem solid #E1E3E2;
+}
+.goodsListItem{
+	width: 100%;
+	height: 0.82rem;
+	border-bottom: 0.03rem solid #E1E3E2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.28rem;
+	color: rgb(112,112,112);
+}
+.itemName{
+	width: 4.8rem;
+	margin-left: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.itemCount{
+	width: 1.3rem;
+	text-align: center;
+}
+
+/* 图片 */
+.part_pic{
+	padding-bottom: 0;
+	height: auto;
+	margin-top: 0;
+	justify-content: flex-start;
+	background: #fff;
+	padding: 0.13rem 0;
+	
+}
+.packagePic{
+	width: 4.15rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	margin-top: 0.26rem;
+}
+.goodsImg{
+	width: 1.57rem;
+	height: 1.84rem;
+	margin-right: 0.65rem;
+	margin-top: 0.08rem;
+
+	
+}
+.part_pic .recipientInfo .part_sendTitle{
+	height: 2.12rem;
+	background: #fff;
+	align-items: flex-start;
+}
+.part_pic .recipientInfo .part_sendTitle .collect_part{
+	margin-top: 0.21rem;
+}
+/* 物流信息 */
+.logisticsInformation{
+	width: 100%;
+	padding: 0.21rem 0.53rem ;
+	background: #fff;
+}
+.order_message{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.orderNumber{
+	width: 4rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+}
+.orderChannal{
+	width: 0.99rem;
+	height: 0.34rem;
+	background: rgb(114,113,113);
+	color: #fff;
+	text-align: center;
+	line-height: 0.34rem;
+	border-radius: 0.17rem;
+
+	
+}
+.logistics ul{
+	margin-top: 0.3rem;
+}
+.logistics_item{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 0.65rem;
+}
+.logisticIcon{
+	width: 0.34rem;
+	height: 0.34rem;
+	position: relative;
+}
+.logisticIcon img{
+	width: 0.34rem;
+	height: 0.36rem;
+}
+.line{
+	
+	position: absolute;
+	width: 0.01rem;
+	background: rgb(166,166,166);
+	height: 0.3rem;
+	left: 0.16rem;
+	top: 0.34rem;
+	
+}
+.logisticBody{
+	width: 5.79rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	border-bottom: 0.01rem solid #E1E3E2;
+	font-size: 0.24rem;
+	color: rgb(78,78,78);
+}
+.logisticStatus{
+	width: auto;
+}
+.logisticTime{
+	width: auto;
+	color: rgb(127,127,127);
+	font-size: 0.22rem;
+	
+}
+.logistics ul>li:nth-last-child(1) .logisticBody{
+	border-bottom: 0;
+}

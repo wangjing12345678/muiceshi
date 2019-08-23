@@ -109,6 +109,10 @@ a.mui-pull-left:active{
 
 	margin-right: 0.6rem;
 }
+.editMessage img{
+	width: 0.22rem;
+	height: 0.22rem;
+}
 .messageBody div{
 	height: 0.35rem;
 }
@@ -420,7 +424,6 @@ a.mui-pull-left:active{
 .part_goods{
 	margin-top: 0.2rem;
 	background: #fff;
-	padding-bottom: 0.84rem;
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	background: #fff;
 	position: relative;
@@ -461,12 +464,18 @@ a.mui-pull-left:active{
 	height: 1.25rem;
 	background: rgb(242,242,242);
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	
+}
+.tab_name{
+	width: 55%;
+}
+.tab_count{
+	width: 30%;
 }
 .goodsInfo div{
 	height: 1.25rem;
-	width: 50%;
 	font-size: 0.3rem;
 	color: rgb(121,120,120);
 	text-align: center;
@@ -476,6 +485,7 @@ a.mui-pull-left:active{
 	width: 100%;
 	height: 3.07rem;
 	padding-top: 0.7rem;
+	padding-bottom: 0.84rem;
 }
 .noGoods img{
 	width: 1.53rem;
@@ -483,6 +493,37 @@ a.mui-pull-left:active{
 	display: block;
 	margin: 0 auto;
 }
+.goodsAll{
+	width: 100%;
+}
+.goodsAll li{
+	width: 100%;
+	height: 0.82rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	font-size: 0.28rem;
+	color: rgb(112,112,112);
+	border-bottom: 0.01rem solid #E1E3E2;
+}
+.goodsAll_name{
+	width: 55%;
+}
+.goodsAll_count{
+	width: 30%;
+}
+.goodsAll_edit{
+	width: 15%;
+}
+.goodsAll_edit img{
+	width: 0.22rem;
+	height: 0.22rem;
+}
+.goodsAll li:nth-last-child(1){
+	border-bottom: none;
+}
+
 
 
 /* 弹出菜单 */
@@ -597,16 +638,256 @@ a.mui-pull-left:active{
 
 /* 搜索物品弹出菜单 */
 #goodsPopover{
-	height: 8.56rem;
+	height: 1.68rem;
 	z-index: 10000;
 	border-radius: 0;
 	position: fixed;
-	
+	background: #E1E3E2;
 	right: 0!important;
 	left: 0!important;
 	margin: 0 auto;
 	top: 1.41rem!important;
 	width: 5.58rem;
+	padding-top: 0.2rem;
+}
+#goodsPopover input.goodsSearch{
+	width: 5.18rem;
+	height: 0.6rem;
+	padding: 0;
+	display: block;
+	margin: 0.05rem auto;
+	border: none;
+	border-radius: 0;
+	padding-left: 0.15rem;
+	overflow: auto;
+}
+.noGoodsMessage{
+	width: 5.18rem;
+	margin: 0.15rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.20rem;
+	color: rgb(78,78,78);
+}
+.addGoods{
+	width: 0.8rem;
+	height: 0.5rem;
+	background: rgb(229,64,83);
+	border-radius: 0.08rem;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #fff;
+}
+.searchReault{
+	width: 5.18rem;
+	position: absolute;
+	top: 0.85rem;
+	left: 0.2rem;
+	background: #fff;
+	border-top: 0.02rem solid #E1E3E2;
+	z-index: 99999;
+	display: none;
+/* 	background: red; */
+	/* height: 3rem; */
+}
+.searchReault li{
+	width: 100%;
+	height: 1rem;
+	border-bottom: 0.01rem solid #E1E3E2;
+	font-size: 0.22rem;
+	color: #787878;
+	
+}
+.brandName{
+	width: 100%;
+	padding: 0.06rem 0.15rem;
+	color: rgb(51,51,51);
+}
+.attribute{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.15rem;
+}
+.confirm{
+	width: 3.42rem;
+	height: 0.78rem;
+	background: rgb(229,64,83);
+	border: 0.01rem solid #fff;
+	border-radius: 0.15rem;
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.78rem;
+	display: block;
+	margin: 1rem auto 0.6rem;
+	padding: 0;
 }
 
+/* 确认订单弹出框 */
+#orderPopover{
+	width: 7.5rem;
+	height: 10.32rem;
+	z-index: 10000;
+	border-radius: 0;
+	position: fixed;
+	background: #fff;
+	left: 0!important;
+	top: 0!important;
+	padding-top: 0.2rem;
+}
+.orderPopover_title{
+	width: 100%;
+	text-align: center;
+	color: rgb(78,78,78);
+	font-size: 0.36rem;
+	padding: 0.16rem 0;
+}
+.part_recipient_popover{
+	padding-bottom: 0.84rem;
+	background: #fff;
+	position: relative;
+	height: 1.03rem;
+	margin-bottom: 0.11rem;
+	
+}
+.part_rec_close_popover{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(243,241,241);
+	
+}
+.recipientInfo_popover{
+	border-bottom: none;
+}
+.tips{
+	width: 6.4rem;
+	border-radius: 0.15rem;
+	background: rgb(243,241,241);
+	padding: 0.1rem;
+	font-size: 0.24rem;
+	color: rgb(142,140,140);
+	margin: 0.2rem auto;
+}
 
+/* 物品 */
+.part_goods_popover{
+	padding-bottom: 0;
+	height: auto;
+	margin-top: 0;
+}
+.part_sendTitle{
+	width: 100%;
+	height: 1.09rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(242,242,242);
+}
+.goodsName{
+	width: 4.3rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+	text-align: center;
+}
+.goodsCount{
+	width: 1rem;
+	font-size: 0.3rem;
+	color: rgb(78,78,78);
+}
+.goodsListBody{
+	margin-top: 0.05rem;
+}
+.goodsList,.goodsListBody{
+	width: 100%;
+	background: rgb(242,242,242);
+}
+.goodsList{
+	/* border-bottom: 0.05rem solid #E1E3E2; */
+	background: rgb(242,242,242);
+}
+.goodsListItem{
+	width: 100%;
+	height: 0.55rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.28rem;
+	color: rgb(112,112,112);
+}
+.itemName{
+	width: 4.8rem;
+	margin-left: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.itemCount{
+	width: 1.3rem;
+	text-align: center;
+}
+.btn_popover{
+	width: 100%;
+	padding: 0.28rem 0.68rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btn_popover div{
+	width: 1.87rem;
+	height: 0.58rem;
+	border-radius: 0.15rem;
+	background: rgb(163,160,160);
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.58rem;
+}
+.btn_popover div.confirm_popover{
+	background: rgb(49,48,48);
+}
+.orderNumber_fillIn{
+	width: 6.32rem;
+	height: 0.55rem;
+	background: rgb(219,217,217);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.28rem;
+}
+.inputOrderNumber{
+	width: 4.2rem;
+	height: 0.43rem;
+	background: #fff;
+}
+.inputOrderNumber input{
+	width: 4rem;
+	height: 0.43rem;
+	border: 0;
+	margin: 0;
+	
+	font-size: 0.26rem;
+	
+}
+.sort_order{
+	color: #fff;
+	width: 0.95rem;
+	height: 0.55rem;
+	background-color: rgb(106,105,105);
+	text-align: center;
+	line-height: 0.55rem;
+}
+.order_confirm{
+	color: rgb(78,78,78);
+	width: 0.97rem;
+	height: 0.43rem;
+	text-align: center;
+	line-height: 0.43rem;
+	background: #fff;
+	margin-right: 0.07rem;
+}

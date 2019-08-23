@@ -23,17 +23,17 @@
 			</div>
 			<button class="submit">登录</button>
 		</form>
-		<form action="" class="dataBox">
+		<form action="" class="dataBox" id="dataBox">
 			<div class="password">
-				<img src="image/point.png" alt=""><input type="text" class="passwordInput" placeholder="CID">
+				<img src="image/point.png" alt=""><input type="text" class="passwordInput" placeholder="CID" form="dataBox" name="password">
 			</div>
 			<div class="username">
-				<img src="image/userIcon.png" alt=""><input type="text" class="usernameInput" placeholder="用户名">
+				<img src="image/userIcon.png" alt=""><input type="text" class="usernameInput" placeholder="用户名" form="dataBox" name="username">
 				<div class="userType">网点用户</div>
 			</div>
 			
 			<div class="password" style="margin-bottom: 0;">
-				<img src="image/passwordIcon.png" alt=""><input type="text" class="passwordInput" placeholder="再次输入">
+				<img src="image/passwordIcon.png" alt=""><input type="text" class="passwordInput" placeholder="再次输入" form="dataBox" name="passagain">
 			</div>
 			<button class="submit">登录</button>
 		</form>
@@ -46,4 +46,18 @@
 		</div>
 		<img src="image/wechat.png" alt="" class="wechat">
 	</body>
+	
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	
+	<script>
+		$(".submit").on('click',function(){
+		
+			console.log($('.dataBox').serializeJson());
+			return false;
+		})
+		
+		
+	</script>
 </html>

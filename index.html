@@ -9,7 +9,7 @@
     <link href="css/mui.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/mui.picker.css">
 	<link rel="stylesheet" href="css/mui.poppicker.css">
-	<!-- <link rel="stylesheet" href="css/animate.css"> -->
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/rem.js"></script>
@@ -26,12 +26,30 @@
 			<div class="mui-inner-wrap">
 				<!-- 菜单容器 -->
 				<aside class="mui-off-canvas-left" id="offCanvasSide">
-					<div class="mui-scroll-wrapper">
-						<div class="mui-scroll">
+					        <div class="storeTitle">门店 <img src="" alt=""></div>
+							<ul class="menu_list">
+								<li>
+									<img src="image/search.png" alt="">
+									<div>寄件</div>
+								</li>
+								<li>
+									<img src="image/search.png" alt="">
+									<div>订单管理</div>
+								</li>
+								<li>
+									<img src="image/search.png" alt="">
+									<div>地址簿</div>
+								</li>
+							</ul>
+							
+							<div class="nameBox_menu">
+								<img src="image/loIcon.png" alt="">
+								<div>哈哈</div>
+							</div>
+							
 							<!-- 菜单具体展示内容 -->
 							
-						</div>
-					</div>
+					
 				</aside>
 				<!-- 主页面标题 -->
 				<header class="mui-bar mui-bar-nav">
@@ -42,7 +60,7 @@
 						</div>
 						
 					</div>
-					<div class="analysis_icon"><img src="./image/analysis.png" alt=""></div>
+					<div class="analysis_icon animated flash" ><img src="./image/analysis.png" alt=""></div>
 				</header>
 	
 				<!-- 主页面内容容器 -->
@@ -69,7 +87,7 @@
 											<div class="messageBody_address">15646486</div>
 											
 										</div>
-										<div class="editMessage"><img src="" alt=""></div>
+										<div class="editMessage"><img src="image/editIcon.png" alt=""></div>
 									
 										
 									</div>
@@ -129,7 +147,7 @@
 												<div class="messageBody_address">15646486</div>
 												
 											</div>
-											<div class="editMessage"><img src="" alt=""></div>
+											<div class="editMessage"><img src="image/editIcon.png" alt=""></div>
 										
 											
 										</div>
@@ -193,23 +211,44 @@
 											<div class="messageBody_address">15646486</div>
 											
 										</div>
-										<div class="editMessage"><img src="" alt=""></div>
+										<div class="editMessage"></div>
 									
 										
 									</div>
 								</div>
 								<div class="goodsInfo">
-									<div>商品名称</div>
-									<div>数量</div>
+									<div class="tab_name">商品名称</div>
+									<div class="tab_count">数量</div>
 								</div>
-								<div class="noGoods">
+								<div class="noGoods" style="display: none;">
 									<img src="image/nogoods.png" alt="">
+								</div>
+								<div class="goodsAll" >
+									<ul>
+										<li>
+											<div class="goodsAll_name">fewsf</div>
+											<div class="goodsAll_count">5</div>
+											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+										</li>
+										<li>
+											<div class="goodsAll_name">fewsf</div>
+											<div class="goodsAll_count">5</div>
+											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+										</li>
+										<li>
+											<div class="goodsAll_name">fewsf</div>
+											<div class="goodsAll_count">5</div>
+											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+										</li>
+									</ul>
 								</div>
 								
 											
 							
 							
 						</div>
+						<a href="#orderPopover" id="confirmOrder" class="mui-btn mui-btn-primary mui-btn-block confirm">确认订单</a>
+						<!-- <button class="confirm">确定下单</button> -->
 						
 						
 					</div>
@@ -225,11 +264,35 @@
 		<!-- 搜索商品弹出菜单 -->
 		<div id="goodsPopover" class="mui-popover">
 			<div class="mui-popover-arrow"></div>
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					<div class="diji">kjoo</div>
-				</div>
-			</div>
+			<!-- <div class="mui-scroll-wrapper">
+				<div class="mui-scroll"> -->
+					<input type="text" class="goodsSearch">
+					<div class="searchReault">
+						<ul>
+							<li>
+								<div class="brandName">16546465498</div>
+								<div class="attribute">
+									<span>444</span>
+									<span>555</span>
+									<span>222</span>
+								</div>
+							</li>
+							<li>
+								<div class="brandName">16546465498</div>
+								<div class="attribute">
+									<span>444</span>
+									<span>555</span>
+									<span>222</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="noGoodsMessage">
+						<div>如每有想添加的商品，您可新增一条商品信息</div>
+						<div class="addGoods">新增</div>
+					</div>
+			<!-- 	</div>
+			</div> -->
 		
 		</div>
 		
@@ -260,6 +323,114 @@
 		
 		</div>
 		
+		<!-- 确认订单弹框 -->
+		<div id="orderPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="orderPopover_title">确认订单</div>
+					<div class="part_recipient_popover">
+							<div class="recipientInfo_popover">
+								<div class="part_rec_close_popover">
+									<div class="clearfix">
+										<div class="collect_part">收</div>
+									</div>
+									<div class="messageBody">
+										<div class="messageBody_name">11111</div>
+										<div class="messageBody_phone">45</div>
+										<div class="messageBody_address">15646486</div>
+										
+									</div>
+									<div class="editMessage"></div>
+								</div>
+							</div>
+					</div>
+					<div class="part_recipient_popover">
+							<div class="recipientInfo_popover">
+								<div class="part_rec_close_popover">
+									<div class="clearfix">
+										<div class="collect_part">收</div>
+									</div>
+									<div class="messageBody">
+										<div class="messageBody_name">11111</div>
+										<div class="messageBody_phone">45</div>
+										<div class="messageBody_address">15646486</div>
+										
+									</div>
+									<div class="editMessage"></div>
+								</div>
+							</div>
+					</div>
+					<div class="tips">
+						温馨提示：根据我们的打包规则，将自动将您的订单打包，请您核对以下信息！
+					</div>
+					<div class="part_goods_popover" >
+						<div class="recipientInfo_popover">
+							<div class="part_sendTitle">
+								<div class="clearfix">
+									<div class="collect_part">收</div>
+								</div>
+								<div class="goodsName">商品名称
+								</div>
+								<div class="goodsCount">数量</div>	
+							</div>
+						</div>
+						<div class="goodsList">
+							<ul class="goodsListBody">
+								<div class="orderNumber_fillIn">
+									<div class="sort_order">订单一</div>
+									<div class="inputOrderNumber">
+										<input type="text" placeholder="请填写订单号">	
+										<img src="" alt="">
+									</div>
+									<div class="order_confirm">确定</div>
+								</div>
+								<li class="goodsListItem">
+									<div class="itemName">fbisdfhisgr11111111111111111111111111111111111111111111</div>
+									<div class="itemCount">2</div>
+									
+								</li>
+								<li class="goodsListItem" style="border-bottom: 0;">
+									<div class="itemName">fbisdfhisgr11111111111111111111111111111111111111111111</div>
+									<div class="itemCount">2</div>
+									
+								</li>
+							</ul>
+						</div>
+						<div class="goodsList">
+							<ul class="goodsListBody">
+								<div class="orderNumber_fillIn">
+									<div class="sort_order">订单一</div>
+									<div class="inputOrderNumber">
+										<input type="text" placeholder="请填写订单号">	
+										<img src="" alt="">
+									</div>
+									<div class="order_confirm">确定</div>
+								</div>
+			
+								<li class="goodsListItem">
+									<div class="itemName">fbisdfhisgr11111111111111111111111111111111111111111111</div>
+									<div class="itemCount">2</div>
+									
+								</li>
+								<li class="goodsListItem" style="border-bottom: 0;">
+									<div class="itemName">fbisdfhisgr11111111111111111111111111111111111111111111</div>
+									<div class="itemCount">2</div>
+									
+								</li>
+							</ul>
+						</div>
+						<div class="btn_popover">
+							<div>修改</div>
+							<div class="confirm_popover">确定</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
+		</div>
+		
 		<script type="text/javascript" src="js/mui.picker.js"></script>
 		<script type="text/javascript" src="js/mui.poppicker.js"></script>
 		
@@ -285,8 +456,7 @@
 			})
 		
 			
-					var cityData3 = {
-						
+					var cityData3 = [{
 							value: '130000',
 							text: '河北省',
 							children: [{
@@ -303,32 +473,11 @@
 									text: "桥西区"
 								}]
 							}]
-					}
+					}]
 					var picker = new mui.PopPicker({
-							layer: 2
+							layer: 3
 						});
-							picker.setData([{
-								value: '110000',
-								text: '北京市',
-								children: [{
-										value: "110101",
-										text: "东城区"
-								}]
-							}, {
-								value: '120000',
-								text: '天津市',
-								children: [{
-									value: "120101",
-									text: "和平区"
-								}, {
-									value: "120102",
-									text: "河东区"
-								}, {
-									value: "120104",
-									text: "南开区"
-								}
-								]
-							}])
+							picker.setData(cityData3)
 							$("#showCityPicker3").on('tap',function(){
 								picker.show(function(SelectedItem) {
 									console.log(SelectedItem);
@@ -360,14 +509,11 @@
 							$(".submitBtn").css('display','block')
 							$(".part_recipient").css('height','auto')
 							
-							// $(".part_recipient").animate({height:'6.57rem'},200)
-							$(".part_send").css({'margin-top':'0.95rem'})	
-							$(".part_send").css({'height':'1.03rem'})
+					
+							$(".part_send").css({'margin-top':'0.95rem','height':'1.03rem','margin-bottom':'0.2rem','overflow':'hidden'})
 							$(".part_send_close").css('display','flex')
 							$(".recipient_titile.part_send_title").css('display','none')
-							$(".part_send").css({'margin-bottom':'0.2rem'})
 							$(".submitBtn.btn_sendPart").css('display','none')
-							$(".part_send").css('overflow','hidden')
 							
 							$(".part_goods").css({'height':'1.03rem','overflow':'hidden'})
 							$(".part_goods_close").css('display','flex')
@@ -376,18 +522,14 @@
 						
 						mui(".part_goods").on('tap',".part_goods_close",function(){
 								$(".part_recipient").css({'height':'1.03rem','overflow':'hidden'})
-								// $(".part_recipient").css('overflow','hidden')
 								$(".part_rec").css('display','none')
 								$(".part_rec_close").css('display','flex')
 								$(".submitBtn").css('display','none')
 								
-								$(".part_send").css({'margin-top':'0.2rem','height':'1.03rem','margin-bottom':'0.2rem','overflow':'hidden'})	
-								// $(".part_send").css({'height':'1.03rem'})
+								$(".part_send").css({'margin-top':'0.2rem','height':'1.03rem','margin-bottom':'0.2rem','overflow':'hidden'})
 								$(".part_send_close").css('display','flex')
 								$(".recipient_titile.part_send_title").css('display','none')
-								// $(".part_send").css({'margin-bottom':'0.2rem'})
 								$(".submitBtn.btn_sendPart").css('display','none')
-								// $(".part_send").css('overflow','hidden')
 								
 								$(".part_goods").css({'height':'auto','overflow':''})
 								$(".part_goods_close").css('display','none')
@@ -396,14 +538,30 @@
 						})
 						
 						// 物品弹出菜单控制
-						$(".diji").on('click',function(){
-							mui('#goodsPopover').popover('hide',document.getElementById("closeWindow"));
-							mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
-						
-						})
+						// $(".diji").on('click',function(){
+						// 	mui('#goodsPopover').popover('hide',document.getElementById("closeWindow"));
+						// 	mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
+						// 		
+						// 
+						// })
 						mui('body').on('hidden', '.mui-popover', function(e) {
 							console.log('ppp')
+							$(".searchReault").css({'display':'none'})
 						});
+						
+						$(".goodsSearch").on('input',function(){
+							console.log('ooo')
+							$(".searchReault").css({'display':'block'})
+						})
+						
+						
+						$(".searchReault").on('tap','li',function(){
+							console.log('ooo')
+							console.log($(this).index())
+							$(".searchReault").css({'display':'block'})
+							mui('#goodsPopover').popover('hide',document.getElementById("closeWindow"));
+							mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
+						})
 						
 						
 					
