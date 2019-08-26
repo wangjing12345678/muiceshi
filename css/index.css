@@ -62,10 +62,29 @@ a.mui-pull-left:active{
 	padding: 0;
 	margin: 0;
 	
+	
 }
 .analysis_icon img{
 	width: 0.42rem;
 	height: 0.53rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: imgAnimate  0.5s;
+}
+@keyframes imgAnimate{
+	0%{
+		top: -0.1rem;
+	}
+	40%{
+		top: 0rem;
+	}
+	80%{
+		top: -0.1rem;
+	}
+	100%{
+		top: 0;
+	}
 }
 
 /* 头部结束 */
