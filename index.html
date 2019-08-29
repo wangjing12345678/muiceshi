@@ -34,7 +34,7 @@
 								</li>
 								<li>
 									<img src="image/search.png" alt="">
-									<div>订单管理</div>
+									<div><a class="mui-navigate-right" href="./my_package.html">订单管理</a> </div>
 								</li>
 								<li>
 									<img src="image/search.png" alt="">
@@ -66,59 +66,62 @@
 				<!-- 主页面内容容器 -->
 				<div class="mui-content mui-scroll-wrapper" >
 					<div class="mui-scroll">
-						<div class="part_recipient">
-								<div class="recipientInfo">
-									<div class="recipient_titile part_rec">
-											<div class="clearfix">
-												<div class="collect_part active">收</div>
-												<div class="recipient">收件人</div>
-											</div>
-											<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
-											<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
-			
-									</div>
-									<div class="part_rec_close">
-										<div class="clearfix">
-											<div class="collect_part">收</div>
+						<div class="part_recipient_wrapper">
+							<div class="part_recipient">
+									<div class="recipientInfo">
+										<div class="recipient_titile part_rec">
+												<div class="clearfix">
+													<div class="collect_part active">收</div>
+													<div class="recipient">收件人</div>
+												</div>
+												<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
+												<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
+										
 										</div>
-										<div class="messageBody">
-											<div class="messageBody_name">11111</div>
-											<div class="messageBody_phone">45</div>
-											<div class="messageBody_address">15646486</div>
+										<div class="part_rec_close">
+											<div class="clearfix">
+												<div class="collect_part">收</div>
+											</div>
+											<div class="messageBody">
+												<div class="messageBody_name">11111</div>
+												<div class="messageBody_phone">45</div>
+												<div class="messageBody_address">15646486</div>
+												
+											</div>
+											<div class="editMessage"><img src="image/editIcon.png" alt=""></div>
+										
 											
 										</div>
-										<div class="editMessage"><img src="image/editIcon.png" alt=""></div>
-									
+									</div>
+									<div class="messageBox">
+										<div class="name"><label>姓名</label><input type="text"></div>
+										<div class="phone"><label>电话</label><input type="text"></div>
+									</div>
+									<div class="messageBox">
+										<div class="province"><label>省/市</label><input type="text"></div>
+										<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+									</div>
+									<div class="messageBox">
+										<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
+									</div>
+									<div class="saveToAddress">
+										<div class="selectSave">
+											
+											<span></span>
+											<div>保存到地址簿</div>
+											
+										</div>
+										<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
 										
 									</div>
-								</div>
-								<div class="messageBox">
-									<div class="name"><label>姓名</label><input type="text"></div>
-									<div class="phone"><label>电话</label><input type="text"></div>
-								</div>
-								<div class="messageBox">
-									<div class="province"><label>省/市</label><input type="text"></div>
-									<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
-								</div>
-								<div class="messageBox">
-									<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
-								</div>
-								<div class="saveToAddress">
-									<div class="selectSave">
-										
-										<span></span>
-										<div>保存到地址簿</div>
-										
-									</div>
-									<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
-									
-								</div>
-								<img src="image/submit.png" alt="" class="submitBtn">
-					
-							
-							
+									<img src="image/submit.png" alt="" class="submitBtn btn_recivePart">
+												
+								
+								
+							</div>
 						</div>
 						
+						<div class="part_send_wrapper active">
 							<div class="part_send">
 									<div class="recipientInfo">
 										<div class="recipient_titile part_send_title clickOpen">
@@ -174,65 +177,69 @@
 								
 								
 							</div>
-						
-						<div class="part_goods">
-								<div class="recipientInfo">
-									<div class="recipient_titile part_goods_title clickOpen">
-											<div class="clearfix">
-												<div class="collect_part active">物</div>
-											</div>
-											<!-- <input type="text" class="searchBrandName" placeholder="输入品牌名或者物品名" disabled> -->
-											<a href="#goodsPopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block searchBrandName">输入品牌名或者物品名</a>
-											
-									
-									</div>
-									<div class="part_goods_close closeActive">
-										<div class="clearfix">
-											<div class="collect_part">物</div>
-										</div>
-										<!-- <div class="messageBody">
-											<div class="messageBody_name">11111</div>
-											<div class="messageBody_phone">45</div>
-											<div class="messageBody_address">15646486</div>
-											
-										</div>
-										<div class="editMessage"></div> -->
-									
-										
-									</div>
-								</div>
-								<div class="goodsInfo">
-									<div class="tab_name">商品名称</div>
-									<div class="tab_count">数量</div>
-								</div>
-								<div class="noGoods" style="display: none;">
-									<img src="image/nogoods.png" alt="">
-								</div>
-								<div class="goodsAll" >
-									<ul>
-										<li>
-											<div class="goodsAll_name">fewsf</div>
-											<div class="goodsAll_count">5</div>
-											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
-										</li>
-										<li>
-											<div class="goodsAll_name">fewsf</div>
-											<div class="goodsAll_count">5</div>
-											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
-										</li>
-										<li>
-											<div class="goodsAll_name">fewsf</div>
-											<div class="goodsAll_count">5</div>
-											<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
-										</li>
-									</ul>
-								</div>
-								
-											
-							
-							
 						</div>
-						<a href="#orderPopover" id="confirmOrder" class="mui-btn mui-btn-primary mui-btn-block confirm">确认订单</a>
+							
+						<div class="part_goods_wrapper active">
+							<div class="part_goods">
+									<div class="recipientInfo">
+										<div class="recipient_titile part_goods_title clickOpen">
+												<div class="clearfix">
+													<div class="collect_part active">物</div>
+												</div>
+												<!-- <input type="text" class="searchBrandName" placeholder="输入品牌名或者物品名" disabled> -->
+												<a href="#goodsPopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block searchBrandName">输入品牌名或者物品名</a>
+												
+										
+										</div>
+										<div class="part_goods_close closeActive">
+											<div class="clearfix">
+												<div class="collect_part">物</div>
+											</div>
+											<!-- <div class="messageBody">
+												<div class="messageBody_name">11111</div>
+												<div class="messageBody_phone">45</div>
+												<div class="messageBody_address">15646486</div>
+												
+											</div>
+											<div class="editMessage"></div> -->
+										
+											
+										</div>
+									</div>
+									<div class="goodsInfo">
+										<div class="tab_name">商品名称</div>
+										<div class="tab_count">数量</div>
+									</div>
+									<div class="noGoods" style="display: none;">
+										<img src="image/nogoods.png" alt="">
+									</div>
+									<div class="goodsAll" >
+										<ul>
+											<li>
+												<div class="goodsAll_name">fewsf</div>
+												<div class="goodsAll_count">5</div>
+												<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+											</li>
+											<li>
+												<div class="goodsAll_name">fewsf</div>
+												<div class="goodsAll_count">5</div>
+												<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+											</li>
+											<li>
+												<div class="goodsAll_name">fewsf</div>
+												<div class="goodsAll_count">5</div>
+												<div class="goodsAll_edit"><img src="image/editIcon.png" alt=""></div>
+											</li>
+										</ul>
+									</div>
+									
+												
+								
+								
+							</div>
+						</div>
+						
+						<a href="#orderPopover" id="confirmOrder" class="confirm">确认订单</a>
 						<!-- <button class="confirm">确定下单</button> -->
 						
 						
@@ -297,7 +304,14 @@
 					</ul>
 					<div class="calcCount">
 						<div class="count_title">数量</div>
-						<div class="countNumber"><img src="image/del.png" alt="" class="del"><span class="number">20</span><img src="image/add.png" alt="" class="add"></div>
+						<!-- <div class="countNumber">
+							<img src="image/del.png" alt="" class="del"><span class="number">20</span><img src="image/add.png" alt="" class="add">
+						</div> -->
+						<div class="mui-numbox" data-numbox-min='1' >
+							<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+							<input id="test" class="mui-input-numbox" type="number" value="5" />
+							<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+						</div>
 					</div>
 					<div class="popover_btn">
 						<div class="popover_close">关闭</div>
@@ -407,7 +421,8 @@
 						</div>
 						<div class="btn_popover">
 							<div>修改</div>
-							<div class="confirm_popover">确定</div>
+							<!-- <div class="confirm_popover">确定</div> -->
+							<a href="#checkoutPopover" id="confirm_popover" class="mui-btn mui-btn-primary mui-btn-block confirm_popover">确定</a>
 						</div>
 					</div>
 					
@@ -416,21 +431,32 @@
 		
 		</div>
 		
+		<!-- 下单成功弹框 -->
+		<div id="checkoutPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="checkoutSuccess">下单成功</div>
+			<div class="continue">是否保留信息继续下单</div>
+			<div class="continueBtn">
+				<div>否</div>
+				<div class="continueYes">是</div>
+			</div>
+		</div>
+		
+		
 		<script type="text/javascript" src="js/mui.picker.js"></script>
 		<script type="text/javascript" src="js/mui.poppicker.js"></script>
 		
 		 <script type="text/javascript" charset="utf-8">
 			 $(function(){
-				 $(".part_recipient").css({'transition':'all 0.3s'})
-				 $(".part_send").css({'transition':'all 0.3s'})
-				 $(".part_goods").css({'transition':'all 0.3s'})
+				 $(".part_recipient_wrapper").css({'transition':'all ease 0.2s'})
+				 $(".part_send_wrapper").css({'transition':'all ease 0.2s'})
+				 $(".part_goods_wrapper").css({'transition':'all ease 0.2s'})
 				  
 				 mui('.mui-scroll-wrapper').scroll({
 					deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
 					bounce: true
 					});
-				 	$(".part_send").css('overflow','hidden')
-					$(".part_goods").css('overflow','hidden')
+				
 			 })
 
 
@@ -471,54 +497,88 @@
 						// picker.pickers[0].setSelectedIndex(1);
 						// picker.pickers[1].setSelectedIndex(1);
 						
-						mui(".part_send").on('tap','.part_send_close',function(){
+						// 点击寄件样式变化
+						function sendStyle(){
+							$(".part_send_wrapper").removeClass('active')
+							$(".part_goods_wrapper").removeClass('active').addClass('active')
+							$(".part_recipient_wrapper").removeClass('active').addClass('active')
+							
 							$(".part_rec").css('display','none')
 							$(".part_rec_close").css('display','flex')
-							$(".part_recipient").css('overflow','hidden')
 							$(".submitBtn").css('display','none')
-							$(".part_recipient").css({'height':'1.03rem'})
-							$(".part_send").css({'margin-top':'0.2rem','height':'auto','overflow':'','margin-bottom':'0.95rem'})	
+							$(".part_recipient_wrapper").css({'height':'1.03rem'})
+							
+							
+							$(".part_send_wrapper").css({'margin-top':'0.2rem','height':'7.9rem','margin-bottom':'0.55rem'})	
 							$(".part_send_close").css('display','none')
 							$(".recipient_titile.part_send_title").css('display','flex')
 							$(".submitBtn.btn_sendPart").css('display','block')
 							
-							$(".part_goods").css({'height':'1.03rem','overflow':'hidden'})
+							$(".part_goods_wrapper").css({'height':'1.03rem'})
 							$(".part_goods_close").css('display','flex')
 							$(".recipient_titile.part_goods_title").css('display','none')
-						})
+							
+							
+						}
 						
-						mui(".part_recipient").on('tap',".part_rec_close",function(){
-							$(".part_recipient").css('overflow','')
+						// 点击物品样式变化
+						function receivedStyle(){
+							$(".part_send_wrapper").removeClass('active').addClass('active')
+							$(".part_goods_wrapper").removeClass('active').addClass('active')
+							$(".part_recipient_wrapper").removeClass('active')
+							
+							$(".part_recipient_wrapper").css({'height':'6.9rem'})
 							$(".part_rec").css('display','flex')
 							$(".part_rec_close").css('display','none')
 							$(".submitBtn").css('display','block')
-							$(".part_recipient").css('height','auto')
-							
-					
-							$(".part_send").css({'margin-top':'0.95rem','height':'1.03rem','margin-bottom':'0.2rem','overflow':'hidden'})
+
+							$(".part_send_wrapper").css({'margin-top':'0.55rem','height':'1.03rem','margin-bottom':'0.2rem'})
 							$(".part_send_close").css('display','flex')
 							$(".recipient_titile.part_send_title").css('display','none')
 							$(".submitBtn.btn_sendPart").css('display','none')
 							
-							$(".part_goods").css({'height':'1.03rem','overflow':'hidden'})
+							$(".part_goods_wrapper").css({'height':'1.03rem'})
 							$(".part_goods_close").css('display','flex')
 							$(".recipient_titile.part_goods_title").css('display','none')
+							
+							
+						}
+						
+						// 点击收件人样式变化
+						function goodsStyle(){
+							$(".part_send_wrapper").removeClass('active').addClass('active')
+							$(".part_goods_wrapper").removeClass('active')
+							$(".part_recipient_wrapper").removeClass('active').addClass('active')
+							
+		
+							$(".part_recipient_wrapper").css({'height':'1.03rem'})
+							$(".part_rec").css('display','none')
+							$(".part_rec_close").css('display','flex')
+							$(".submitBtn").css('display','none')
+
+							$(".part_send_wrapper").css({'margin-top':'0.2rem','height':'1.03rem','margin-bottom':'0.2rem'})
+							$(".part_send_close").css('display','flex')
+							$(".recipient_titile.part_send_title").css('display','none')
+							$(".submitBtn.btn_sendPart").css('display','none')
+							
+							$(".part_goods_wrapper").css({'height':'auto'})
+							$(".part_goods_close").css('display','none')
+							$(".recipient_titile.part_goods_title").css('display','flex')
+						}
+						
+						
+						
+						mui(".part_send").on('tap','.part_send_close',function(){
+							sendStyle()
+						})
+						
+						mui(".part_recipient").on('tap',".part_rec_close",function(){
+							
+							receivedStyle()
 						})
 						
 						mui(".part_goods").on('tap',".part_goods_close",function(){
-								$(".part_recipient").css({'height':'1.03rem','overflow':'hidden'})
-								$(".part_rec").css('display','none')
-								$(".part_rec_close").css('display','flex')
-								$(".submitBtn").css('display','none')
-								
-								$(".part_send").css({'margin-top':'0.2rem','height':'1.03rem','margin-bottom':'0.2rem','overflow':'hidden'})
-								$(".part_send_close").css('display','flex')
-								$(".recipient_titile.part_send_title").css('display','none')
-								$(".submitBtn.btn_sendPart").css('display','none')
-								
-								$(".part_goods").css({'height':'auto','overflow':''})
-								$(".part_goods_close").css('display','none')
-								$(".recipient_titile.part_goods_title").css('display','flex')
+							goodsStyle()
 							
 						})
 						
@@ -535,7 +595,6 @@
 						});
 						
 						$(".goodsSearch").on('input',function(){
-							console.log('ooo')
 							$(".searchReault").css({'display':'block'})
 						})
 						
@@ -547,6 +606,16 @@
 							mui('#goodsPopover').popover('hide',document.getElementById("closeWindow"));
 							mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
 						})
+						
+						var btn = document.getElementsByClassName("btn_recivePart");
+						mui(".part_recipient_wrapper").on('tap',".btn_recivePart",function(){
+						console.log("ooo")
+						    sendStyle()
+						})
+						
+						
+						
+					
 						
 						
 					

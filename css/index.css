@@ -125,12 +125,20 @@ a.mui-pull-left:active{
 /* 中间收件人部分 */
 .part_recipient{
 	padding-bottom: 0.84rem;
-	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+
 	background: #fff;
 	position: relative;
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	/* transition: all 0.3s; */
-	/* overflow: hidden; */
+
+}
+.part_recipient_wrapper{
+	height: 6.9rem;
+	overflow: hidden;
 	margin-top: 0.4rem;
+	
+
+
 }
 .recipientInfo{
 	width: 100%;
@@ -145,6 +153,7 @@ a.mui-pull-left:active{
 	align-items: center;
 	background: #fff;
 	display: none;
+
 }
 .messageBody{
 	width: 5.5rem;
@@ -424,16 +433,23 @@ a.mui-pull-left:active{
 
 /* 寄东西 */
 .part_send{
-	margin-top: 0.95rem;
+	
 	background: #fff;
 	padding-bottom: 0.84rem;
-	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	
 	background: #fff;
 	position: relative;
-	height: 1.03rem;
+	/* height: 1.03rem; */
 	/* overflow: hidden; */
-	/* transition: all 0.3s; */
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	
 
+}
+.part_send_wrapper{
+	height: 1.03rem;
+	overflow: hidden;
+	margin-top: 0.55rem;
+	
 
 }
 .recipientInfo.send{
@@ -457,6 +473,7 @@ a.mui-pull-left:active{
 	align-items: center;
 	background: #fff;
 
+
 }
 .collect_part.active{
 		background-color: rgb(229,64,83);
@@ -471,15 +488,22 @@ a.mui-pull-left:active{
 
 /* 物品 */
 .part_goods{
-	margin-top: 0.2rem;
+
 	background: #fff;
-	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+	
 	background: #fff;
 	position: relative;
-	height: 1.03rem;
+	/* height: 1.03rem; */
 	/* overflow: hidden; */
 	/* transition: all 0.3s; */
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	
+}
+.part_goods_wrapper{
+	height: 1.03rem;
+	overflow: hidden;
+	margin-top: 0.2rem;
+
 }
 .recipient_titile.part_goods_title{
 	display: none;
@@ -491,7 +515,7 @@ a.mui-pull-left:active{
 	justify-content: space-between;
 	align-items: center;
 	background: #fff;
-	
+
 }
 .recipient_titile a.searchBrandName{
 	width: 5.8rem;
@@ -544,6 +568,7 @@ a.mui-pull-left:active{
 }
 .goodsAll{
 	width: 100%;
+	border-bottom: 0.05rem solid #E1E3E2;
 }
 .goodsAll li{
 	width: 100%;
@@ -595,6 +620,7 @@ a.mui-pull-left:active{
 	margin: 0 auto;
 	top: 1.41rem!important;
 	width: 5.58rem;
+	border-radius: 0;
 }
 .goodsIntoduce{
 	width: 100%;
@@ -635,6 +661,20 @@ a.mui-pull-left:active{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	margin: 0.4rem 0 ;
+	
+}
+.mui-numbox{
+	border: none;
+	font-size: 0.26rem;
+	width: 113px;
+	height: 30px;
+	
+}
+.mui-numbox .mui-input-numbox, .mui-numbox .mui-numbox-input{
+	border:solid 0.01rem #ccc!important;
+	font-size: 0.26rem;
+	
 }
 .count_title{
 	width: 0.8rem;
@@ -887,7 +927,7 @@ a.mui-pull-left:active{
 	justify-content: space-between;
 	align-items: center;
 }
-.btn_popover div{
+.btn_popover div,.btn_popover a{
 	width: 1.87rem;
 	height: 0.58rem;
 	border-radius: 0.15rem;
@@ -897,8 +937,11 @@ a.mui-pull-left:active{
 	text-align: center;
 	line-height: 0.58rem;
 }
-.btn_popover div.confirm_popover{
+.btn_popover a.confirm_popover{
 	background: rgb(49,48,48);
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 .orderNumber_fillIn{
 	width: 6.32rem;
@@ -939,4 +982,58 @@ a.mui-pull-left:active{
 	line-height: 0.43rem;
 	background: #fff;
 	margin-right: 0.07rem;
+}
+a:active{
+	color: #fff;
+}
+.part_goods_wrapper.active,.part_recipient_wrapper.active,.part_send_wrapper.active{
+	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
+}
+
+/* 下单成功弹框 */
+#checkoutPopover{
+
+	width: 5.58rem;
+	height: 5.58rem;
+	position: fixed;
+	right: 0!important;
+	left: 0!important;
+	
+	top: 0!important;
+	bottom: 0!important;
+	margin: auto;
+	border-radius: 0;
+	
+}
+.checkoutSuccess{
+	font-size: 0.5rem;
+	text-align: center;
+	line-height: 0.7rem;
+	margin-top: 1.2rem;
+}
+.continue{
+	font-size: 0.3rem;
+	text-align: center;
+	margin-top: 1.2rem;
+}
+.continueBtn{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.5rem;
+	margin-top: 0.5rem;
+}
+.continueBtn div{
+	width: 1.4rem;
+	height: 0.58rem;
+	border-radius: 0.15rem;
+	background: rgb(163,160,160);
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.58rem;
+}
+.continueBtn div.continueYes{
+	background: rgb(49,48,48);
 }

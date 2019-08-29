@@ -7,10 +7,8 @@
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<link href="css/mui.min.css" rel="stylesheet"/>
-	<!-- 	<link rel="stylesheet" href="css/mui.picker.css">
-		<link rel="stylesheet" href="css/mui.poppicker.css"> -->
 		<link rel="stylesheet" href="css/common.css">
-		<link rel="stylesheet" href="css/myPackage.css">
+		<link rel="stylesheet" href="css/my_package.css">
 		<script src="js/rem.js"></script>
 	</head>
 	<body>
@@ -85,6 +83,76 @@
 							<div class="packageBtn">打包</div>
 							
 						</div>
+						<div class="list_content checkout" style="display: none;">
+							<div class="toolBox">
+								<div class="orderNumber">
+									2222222222
+									
+								</div>
+								<div class="toolBox_btn">
+									<img src="image/delIcon.png" alt="" class="delIcon">
+									<img src="image/editIcon.png" alt="" class="editIcon">
+								</div>
+							
+							</div>
+							<div class="orderTime">下单时间:2019-8-8 09:10:22</div>
+							<div class="sendMessage">
+								<div class="city_start">
+									dhsiudhu
+									<div class="sendName">12456</div>
+								</div>
+								<div class="sendMethod">
+									<img src="image/sendMethod.png" alt="">
+									<div class="methods_word">直邮</div>
+								</div>
+								<div class="city_end">
+									天津
+									<div class="addressee">16479</div>
+								</div>
+							</div>
+							<!-- <div class="sendName">
+								<div>1465</div>
+								<div>wangjing</div>
+								
+							</div> -->
+							<div class="packageBtn">打包</div>
+							
+						</div>
+						<div class="list_content checkout" style="display: none;">
+							<div class="toolBox">
+								<div class="orderNumber">
+									33333333333
+									
+								</div>
+								<div class="toolBox_btn">
+									<img src="image/delIcon.png" alt="" class="delIcon">
+									<img src="image/editIcon.png" alt="" class="editIcon">
+								</div>
+							
+							</div>
+							<div class="orderTime">下单时间:2019-8-8 09:10:22</div>
+							<div class="sendMessage">
+								<div class="city_start">
+									dhsiudhu
+									<div class="sendName">12456</div>
+								</div>
+								<div class="sendMethod">
+									<img src="image/sendMethod.png" alt="">
+									<div class="methods_word">直邮</div>
+								</div>
+								<div class="city_end">
+									天津
+									<div class="addressee">16479</div>
+								</div>
+							</div>
+							<!-- <div class="sendName">
+								<div>1465</div>
+								<div>wangjing</div>
+								
+							</div> -->
+							<div class="packageBtn">打包</div>
+							
+						</div>
 					
 					</div>
 					
@@ -95,5 +163,25 @@
 							
 							
 		</div>
+		
+		
+		
+		
+		<script>
+			mui(".package_tab_box").on('tap','.package_tab_item',function(){
+				$('.package_tab_item').removeClass('active').eq($(this).index()).addClass('active');
+				$('.list_content').css({'display':'none'}).eq($(this).index()).css({'display':'block'})
+			})
+			$(function(){
+	
+					console.log(window.clipboardData.getData('text/plain',str))
+
+
+			})
+		
+			
+		</script>
 	</body>
+	
+	
 </html>
