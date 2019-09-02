@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		<script src="js/jquery-3.3.1.min.js"></script>
+		<title>速派快递</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/cropper.min.css">
+		<link rel="stylesheet" href="css/ImgCropping.css">
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/document_upload.css">
 		<script src="js/rem.js"></script>
+		<script src="js/url.js"></script>
 	</head>
 	<body>
 		<header class="bar">
@@ -17,18 +21,31 @@
 		<div class="documentUpload">
 			<div class="document_pic">
 				<div class="document_front">
-					<img src="image/front.png" alt="">
-					<div>点击上传人物面</div>
+					<label title="上传图片" for="chooseImg_front" class=" choose-btn" id="replaceImg">
+						<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_front" class="hidden" onchange="selectImg(this,'front')">
+						<img src="image/front.png" alt="" id="frontImg">
+						<div>点击上传人物面</div>
+					</label>
 				</div>
 				<div class="document_otherSide">
-					<img src="image/otherSide.png" alt="">
-					<div>点击上传国徽面</div>
+					<!-- <label title="上传图片" for="chooseImg_otherSide" class=" choose-btn" id="replaceImg">
+						<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_otherSide" class="hidden" onchange="selectImg(this,'otherSide')" >
+						<img src="image/otherSide.png" alt="" id="otherSideImg">
+						<div>点击上传国徽面</div>
+					</label> -->
+					<div title="上传图片"  class=" choose-btn" id="firstNoChange">
+						<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_otherSide" class="hidden" >
+						<img src="image/otherSide.png" alt="" id="otherSideImg">
+						<div>点击上传国徽面</div>
+						
+					</div>
+					
 				</div>
 			</div>
 			<div class="docMessage">
 				<ul>
 					<li>
-						<div>证件号</div>
+						<div>证件号</div> 
 						<input type="text" placeholder="（上传身份证后自动识别）">
 					</li>
 					<li>
@@ -49,5 +66,56 @@
 			
 		</div>
 		<button class="save">保存</button>
+		
+		<!--图片裁剪框 start-->
+		<div style="display: none" class="tailoring-container">
+			<div class="black-cloth" onclick="closeTailor(this)"></div>
+			<div class="tailoring-content">
+				<!--<div class="tailoring-content-one">-->
+
+					<!--<div class="close-tailoring"  onclick="closeTailor(this)">×</div>-->
+				<!--</div>-->
+				<div class="tailoring-content-two">
+					<div class="tailoring-box-parcel">
+						<img id="tailoringImg">
+					</div>
+					<div class="preview-box-parcel">
+						<p>图片预览：</p>
+						<div class="square previewImg"></div>
+						<div class="circular previewImg"></div>
+					</div>
+				</div>
+				<div class="tailoring-content-three">
+					<button class="l-btn cancel" onclick="closeTailor(this)">取消</button>
+					<div class="operation">
+						<button class="l-btn cropper-reset-btn">复位</button>
+						<button class="l-btn cropper-rotate-btn">旋转</button>
+						<button class="l-btn cropper-scaleX-btn">换向</button>
+					</div>
+
+					<button class="l-btn sureCut" id="sureCut">确定</button>
+				</div>
+			</div>
+		</div>
+		<!--图片裁剪框 end-->
+		
+		
+		<!-- <script src="js/common.js"></script> -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/cropper.min.js"></script>
+		<script src="js/idcardCropper.js"></script>
+		
+		<script>
+			
+			document.getElementById("firstNoChange").addEventListener('tap',function() {
+				mui.toast('请先上传正面');
+			})
+			
+			
+			
+			
+		</script>
+	
 	</body>
 </html>
