@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>速派快递</title>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<link href="css/mui.min.css" rel="stylesheet"/>
@@ -19,12 +19,30 @@
 				<div class="mui-inner-wrap">
 					<!-- 菜单容器 -->
 					<aside class="mui-off-canvas-left" id="offCanvasSide">
-						<div class="mui-scroll-wrapper">
-							<div class="mui-scroll">
+						        <div class="storeTitle">门店 <img src="" alt=""></div>
+								<ul class="menu_list">
+									<li >
+										<img src="image/send.png" alt="">
+										<div id="mailing">寄件</div>
+									</li>
+									<li class="active">
+										<img src="image/searchactive.png" alt="">
+										<div id="orderManagement"  >订单管理</div>
+									</li>
+									<li>
+										<img src="image/addressIcon.png" alt="">
+										<div id="addressBook" >地址簿</div>
+									</li>
+								</ul>
+								
+								<div class="nameBox_menu">
+									<img src="image/loIcon.png" alt="">
+									<div>哈哈</div>
+								</div>
+								
 								<!-- 菜单具体展示内容 -->
 								
-							</div>
-						</div>
+						
 					</aside>
 					<!-- 主页面标题 -->
 					<header class="mui-bar mui-bar-nav">
@@ -48,7 +66,7 @@
 												<div class="messageBody_address">15646486</div>
 												
 											</div>
-											<div class="uploadIdcard">证件上传</div>
+											<div class="uploadIdcard toUpload">证件上传</div>
 										
 											
 										</div>
@@ -58,7 +76,7 @@
 									<div class="recipientInfo">
 										<div class="part_rec_close">
 											<div class="clearfix">
-												<div class="collect_part">收</div>
+												<div class="collect_part">寄</div>
 											</div>
 											<div class="messageBody">
 												<div class="messageBody_name">11111</div>
@@ -76,7 +94,7 @@
 								<div class="recipientInfo">
 									<div class="part_sendTitle">
 										<div class="clearfix">
-											<div class="collect_part">收</div>
+											<div class="collect_part">物</div>
 										</div>
 										<div class="goodsName">商品名称
 										</div>
@@ -146,12 +164,21 @@
 											</div>
 										</li>
 										<li class="logistics_item">
+											<div class="logisticIcon"><img src="image/loIcon.png" alt=""><div class="line"></div></div>
+											<div class="logisticBody">
+												<div class="logisticStatus">包裹已经揽收</div>
+												<div class="logisticTime">2018年8月8日  09:10:22</div>
+											</div>
+										</li>
+										<li class="logistics_item">
 											<div class="logisticIcon"><img src="image/loIcon.png" alt=""></div>
 											<div class="logisticBody">
 												<div class="logisticStatus">包裹已经揽收</div>
 												<div class="logisticTime">2018年8月8日  09:10:22</div>
 											</div>
 										</li>
+										
+										
 									</ul>
 								</div>
 								
@@ -171,5 +198,32 @@
 							
 							
 		</div>
+		
+		
+		<script>
+			 $(function(){
+							 $(".part_recipient_wrapper").css({'transition':'all ease 0.2s'})
+							 $(".part_send_wrapper").css({'transition':'all ease 0.2s'})
+							 $(".part_goods_wrapper").css({'transition':'all ease 0.2s'})
+							  
+							 mui('.mui-scroll-wrapper').scroll({
+								deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+								bounce: true
+								});
+							
+			})
+			
+			mui(".menu_list").on('tap','#mailing',function(){
+				location.href = './index.html'
+			})
+			
+			mui(".menu_list").on('tap','#addressBook',function(){
+				location.href = './address_book.html'
+			})
+			
+			mui('.part_recipient').on('tap','.toUpload',function(){
+				location.href = './document_upload.html'
+			})
+		</script>
 	</body>
 </html>

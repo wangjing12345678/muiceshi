@@ -36,20 +36,24 @@ body{
 	color: #fff;
 	padding-left: 0.5rem;
 }
+.menu_list li.active div{
+	color: rgb(229,64,83);
+}
 .nameBox_menu{
 	width: 100%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
-	padding: 0.3rem 0 0.3rem 0.5rem;
+	padding-bottom: 0.5rem;
+	/* padding: 0.3rem 0 0.3rem 0.5rem; */
 	color: #fff;
 }
 .nameBox_menu img{
-	width: 1rem;
-	height: 1rem;
+	width: 0.7rem;
+	height: 0.7rem;
 	margin-right: 0.2rem;
 }
 .storeTitle{
@@ -59,6 +63,7 @@ body{
 	align-items: center;
 	font-size: 0.33rem;
 	color: #fff;
+
 	padding: 0.4rem 0 0.2rem;
 }
 	

@@ -77,6 +77,13 @@
 .messageBody div{
 	height: 0.35rem;
 }
+.messageBox.box_name{
+	border-bottom: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .messageBody div.messageBody_name{
 	width: 1.5rem;
 	display: inline-block;
@@ -111,28 +118,38 @@
 	width: 50%;
 	float: left;
 	display: flex;
-	justify-content: space-between;align-items: center;
+	justify-content: space-between;
+	align-items: flex-end;
 	height: 1rem;
+	padding-bottom: 0.1rem;
 	
 }
 .messageBox div label{
 	font-weight: bold;
+	padding-bottom: 0.03rem;
 }
 .messageBox div input{
-	width: 2.5rem;
+	width: 2.1rem;
 	padding: 0;
 	margin: 0;
-	border:none
+	border:none;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	line-height: 0.4rem;
 }
 .messageBox div.name{
-	border-right: 0.05rem solid rgb(225,227,226);
-	padding-right: 0.2rem;
+	/* border-right: 0.05rem solid rgb(225,227,226); */
+	margin-right: 0.2rem;
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	padding: 0 0.25rem 0.1rem;
 
 
 	
 }
 .messageBox div.phone{
-	padding-left: 0.3rem;
+	margin-left: 0.3rem;
+	padding: 0 0.25rem 0.1rem;
+	border-bottom: 0.05rem solid rgb(225,227,226);
 }
 .messageBox div.phone label{
 	margin-right: 0.06rem;
@@ -191,9 +208,11 @@
 }
 .messageBox div.address_detail{
 	width: 100%;
+	justify-content: flex-start;
 }
 .messageBox div.address_detail input{
-	width: 5.5rem;
+	width: 5.4rem;
+	margin-left: 0.3rem;
 }
 .saveToAddress{
 	width: 100%;

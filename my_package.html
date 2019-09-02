@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>速派快递</title>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<link href="css/mui.min.css" rel="stylesheet"/>
@@ -19,12 +19,30 @@
 				<div class="mui-inner-wrap">
 					<!-- 菜单容器 -->
 					<aside class="mui-off-canvas-left" id="offCanvasSide">
-						<div class="mui-scroll-wrapper">
-							<div class="mui-scroll">
+						        <div class="storeTitle">门店 <img src="" alt=""></div>
+								<ul class="menu_list">
+									<li >
+										<img src="image/send.png" alt="">
+										<div id="mailing">寄件</div>
+									</li>
+									<li class="active">
+										<img src="image/searchactive.png" alt="">
+										<div id="orderManagement"  >订单管理</div>
+									</li>
+									<li>
+										<img src="image/addressIcon.png" alt="">
+										<div id="addressBook" >地址簿</div>
+									</li>
+								</ul>
+								
+								<div class="nameBox_menu">
+									<img src="image/loIcon.png" alt="">
+									<div>哈哈</div>
+								</div>
+								
 								<!-- 菜单具体展示内容 -->
 								
-							</div>
-						</div>
+						
 					</aside>
 					<!-- 主页面标题 -->
 					<header class="mui-bar mui-bar-nav">
@@ -34,7 +52,7 @@
 						
 							
 						</div>
-						<div class="analysis_icon"><img src="./image/search.png" alt=""></div>
+						<div class="analysis_icon"><img src="./image/searchGray.png" alt=""></div>
 					</header>
 		
 					<!-- 主页面内容容器 -->
@@ -166,15 +184,28 @@
 		
 		
 		
-		
+		<script type="text/javascript" src="js/common.js"></script>
 		<script>
 			mui(".package_tab_box").on('tap','.package_tab_item',function(){
 				$('.package_tab_item').removeClass('active').eq($(this).index()).addClass('active');
 				$('.list_content').css({'display':'none'}).eq($(this).index()).css({'display':'block'})
+		
 			})
 			$(function(){
 	
-					console.log(window.clipboardData.getData('text/plain',str))
+					// console.log(window.clipboardData.getData('text/plain',str))
+					
+					mui(".menu_list").on('tap','#mailing',function(){
+						location.href = './index.html'
+					})
+					
+					mui(".menu_list").on('tap','#addressBook',function(){
+						location.href = './address_book.html'
+					})
+					
+					mui(".mui-content").on('tap','.list_content',function(){
+						location.href = './order_tracking.html'
+					})
 
 
 			})

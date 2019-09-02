@@ -3,15 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>速派快递</title>
 		<script src="js/mui.min.js"></script>
-		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 		<link href="css/mui.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="css/mui.picker.css">
 		<link rel="stylesheet" href="css/mui.poppicker.css">
+		<link rel="stylesheet" href="css/cropper.min.css">
+		<link rel="stylesheet" href="css/ImgCropping.css">
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/addressee.css">
 		<script src="js/rem.js"></script>
+		<script src="js/url.js"></script>
 	</head>
 	<body>
 		<header class="bar">
@@ -19,13 +22,14 @@
 			<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
 		</header>
 		<div class="part_recipient">
-				<div class="messageBox">
+				<div class="messageBox box_name">
 					<div class="name"><label>姓名</label><input type="text"></div>
 					<div class="phone"><label>电话</label><input type="text"></div>
 				</div>
-				<div class="messageBox">
+				<div class="messageBox ">
 					<div class="province"><label>省/市</label><input type="text"></div>
-					<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
+					<div class="pickerBox">
+						<div id='showCityPicker3' ><img src="image/picker.png" alt=""></div></div>
 				</div>
 				<div class="messageBox">
 					<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
@@ -40,12 +44,18 @@
 				<div class="documentUpload">
 					<div class="document_pic">
 						<div class="document_front">
-							<img src="image/front.png" alt="">
-							<div>点击上传人物面</div>
+							<label title="上传图片" for="chooseImg_front" class=" choose-btn" id="replaceImg">
+								<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_front" class="hidden" onchange="selectImg(this,'front')">
+								<img src="image/front.png" alt="" id="frontImg">
+								<div>点击上传人物面</div>
+							</label>
 						</div>
 						<div class="document_otherSide">
-							<img src="image/otherSide.png" alt="">
-							<div>点击上传国徽面</div>
+							<label title="上传图片" for="chooseImg_otherSide" class=" choose-btn" id="replaceImg">
+								<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_otherSide" class="hidden" onchange="selectImg(this,'otherSide')">
+								<img src="image/otherSide.png" alt="" id="otherSideImg">
+								<div>点击上传国徽面</div>
+							</label>
 						</div>
 					</div>
 					<div class="docMessage">
@@ -68,7 +78,75 @@
 			
 			
 		</div>
-			<button class="save">保存</button>
+		<div class="save">保存</div>
+		
+		
+		<!--图片裁剪框 start-->
+		<div style="display: none" class="tailoring-container">
+			<div class="black-cloth" onclick="closeTailor(this)"></div>
+			<div class="tailoring-content">
+				<!--<div class="tailoring-content-one">-->
+		
+					<!--<div class="close-tailoring"  onclick="closeTailor(this)">×</div>-->
+				<!--</div>-->
+				<div class="tailoring-content-two">
+					<div class="tailoring-box-parcel">
+						<img id="tailoringImg">
+					</div>
+					<div class="preview-box-parcel">
+						<p>图片预览：</p>
+						<div class="square previewImg"></div>
+						<div class="circular previewImg"></div>
+					</div>
+				</div>
+				<div class="tailoring-content-three">
+					<button class="l-btn cancel" onclick="closeTailor(this)">取消</button>
+					<div class="operation">
+						<button class="l-btn cropper-reset-btn">复位</button>
+						<button class="l-btn cropper-rotate-btn">旋转</button>
+						<button class="l-btn cropper-scaleX-btn">换向</button>
+					</div>
+		
+					<button class="l-btn sureCut" id="sureCut">确定</button>
+				</div>
+			</div>
+		</div>
+		<!--图片裁剪框 end-->
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/mui.picker.js"></script>
+		<script type="text/javascript" src="js/mui.poppicker.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/cropper.min.js"></script>
+		<script src="js/idcardCropper.js"></script>
+		<script>
+			$(function(){
+					// 获取省市区列表
+				 http_get(HTTP_URL.ADDRESSLIST,function(res){
+					if(res.code == 1){
+						cityData3 = res.data;
+						var picker = new mui.PopPicker({
+								layer: 3
+							});
+								picker.setData(cityData3)
+								$("#showCityPicker3").on('tap',function(){
+									 // 拼接省市区字符串
+									var addressStr = '';
+									picker.show(function(SelectedItem) {
+										// for(var i=0;i<SelectedItem.length;i++){
+										// 	addressStr+=SelectedItem[i].text + ' '
+										// }
+										// console.log(addressStr)
+										// $("#recivedAddressStr").val(addressStr)
+											
+							})
+						})
+						
+						
+					}
+				})
+			})
+		</script>
 	</body>
 </html>
 

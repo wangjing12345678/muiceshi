@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>速派快递</title>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		 <link href="css/mui.min.css" rel="stylesheet"/>
@@ -14,10 +14,12 @@
 	<body>
 		<header class="bar">
 			<div>地址簿</div>
+			<div class="searchBox">
+				<input type="text" placeholder="搜索收件人、寄件人姓名或手机号">
+			</div>
 			<div class="analysis_icon">
-				<a href="#searchPopover" id="searchToPropover" class="mui-btn mui-btn-primary mui-btn-block intro_a">
-					<img src="./image/search.png" alt="" ></a>
-				</div>
+				<img src="./image/searchGray.png" alt="" >
+			</div>
 		</header>
 		<div class="content">
 			<div class="package_tab" >
@@ -37,31 +39,79 @@
 							</div>
 							<div class="addressCon">哈哈163468496498</div>
 						</div>
+						<div class="editIcon"><img src="image/delAddress.png" alt=""></div>
+						
+					</li>
+					<li class="addressList_item">
+						<div class="userMessage">
+							<div class="basicMessage">
+								<div class="username">嘎嘎嘎</div>
+								<div class="idcard"><img src="image/idcard_green.png" alt=""></div>
+								<div class="phone">3546416498</div>
+							</div>
+							<div class="addressCon">哈哈163468496498</div>
+						</div>
+						<div class="editIcon"><img src="image/delAddress.png" alt=""></div>
+						
+					</li>
+					<li class="addressList_item">
+						<div class="userMessage">
+							
+							<div class="basicMessage">
+								<div class="username">嘎嘎嘎</div>
+								<div class="idcard">
+									<!-- <a href="#searchPopover" id="searchToPropover" class="intro_a"> -->
+										<img src="image/idcard_yellow.png" alt="" class="yellow">
+									<!-- </a> -->
+								</div>
+								<div class="phone">3546416498</div>
+							</div>
+							<div class="addressCon">哈哈163468496498</div>
+						</div>
+						<div class="editIcon"><img src="image/delAddress.png" alt=""></div>
+						
+					</li>
+				</ul>
+			</div>
+			<div class="addressList" style="display: none;">
+				<ul class="addressListBox">
+					<li class="addressList_item">
+						<div class="userMessage">
+							<div class="basicMessage">
+								<div class="username">42855</div>
+								<div class="idcard"><img src="image/idcard_gray.png" alt=""></div>
+								<div class="phone">3546416498</div>
+							</div>
+							<div class="addressCon">哈哈163468496498</div>
+						</div>
 						<div class="editIcon"><img src="image/editIcon.png" alt=""></div>
 						
 					</li>
 				</ul>
 			</div>
-			<button class="addAddress">添加地址 
-			     <a href="#middlePopover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block intro_a"><img src="image/idcard_gray.png" alt="" class="intro_idcard"><img src="image/intro.png" alt="" class="intro_ask"></a>
-			</button>
+			<div class="addAddress"><span class="torecive">添加地址 </span>
+			     <a href="#middlePopover" id="openPopover" class=" intro_a"><img src="image/idcard_gray.png" alt="" class="intro_idcard"><img src="image/intro.png" alt="" class="intro_ask"></a>
+			</div>
 		</div>
 			<!-- 底部解释说明弹出菜单 -->
 		<div id="middlePopover" class="mui-popover">
 			<div class="mui-popover-arrow"></div>
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					<div class="goodsIntroTitle">商品信息</div>
-					<ul class="goodsIntoduce">
-						<li class="introItem"> <span>商品名</span> <div>1</div></li>
-						<li class="introItem"> <span>类别</span> <div>2</div></li>
-						<li class="introItem"> <span>品牌</span> <div>3</div></li>
-						<li class="introItem"> <span>规格</span> <div>3</div></li>
-						<li class="introItem"> <span>单价</span> <div>3</div></li>
-						
-					</ul>
-				</div>
-			</div>
+			<div class="introTitle">证件状态说明</div>
+			<ul class="idcardIntro">
+				<li>
+					<img src="image/idcard_gray.png" alt="">
+					<div>为未上传证件状态，需上传证件</div>
+				</li>
+				<li>
+					<img src="image/idcard_yellow.png" alt="">
+					<div>账号下存在重名证件状态,需手动选择</div>
+				</li>
+				<li>
+					<img src="image/idcard_green.png" alt="">
+					<div>已匹配到的证件信息，无需操作</div>
+				</li>
+			</ul>
+			
 		
 		</div>
 		<div id="searchPopover" class="mui-popover">
@@ -93,11 +143,68 @@
 		</div>
 		
 		<script>
+			// 默认为收件人
+			// $(function(){
+			// 	
+			// 
+			// })
+			var type = 'recived';
+			
 			 mui.init();
 			 // $("#searchToPropover").on('click',function(){
 			 // 	mui('#searchPopover').popover('show',document.getElementById("searchToPropover"));
 			 // 
 			 // })
+			 
+			 mui(".package_tab_box").on('tap','.package_tab_item',function(){
+				if($(this).index() == 0){
+					type = 'recived'
+					$(".addAddress span").removeClass("tosend").addClass('torecive')
+				} else if ($(this).index() == 1){
+					type = 'send'
+					$(".addAddress span").removeClass("torecive").addClass('tosend')
+				}
+				
+			 	$('.package_tab_item').removeClass('active').eq($(this).index()).addClass('active');
+			 	$('.addressList').css({'display':'none'}).eq($(this).index()).css({'display':'block'})
+			 })
+			 
+			 mui(".addAddress").on('tap','.torecive',function(){
+			 	location.href = './addressee.html'
+			 })
+			 
+			 mui(".addAddress").on('tap','.tosend',function(){
+			 	location.href = './modify_sender.html'
+			 })
+			 
+			 // 点击每一项进行编辑
+			 mui('.addressListBox').on('tap','.addressList_item',function(){
+				 if(type == 'recived'){
+					 location.href = 'addressee.html'
+				 }else if(type == 'send'){
+					 location.href = 'modify_sender.html'
+				 }
+			 })
+			 // 点击删除
+			 mui('.addressListBox').on('tap','.editIcon',function(e){
+				 e.stopPropagation()
+				 var btnArray = ['否', '是'];
+				 mui.confirm('是否删除该条地址？', '', btnArray, function(e) {
+				 	if (e.index == 1) {
+						console.log("ok")
+				 	} else {
+				 		console.log("no")
+				 	}
+				 })
+			 	console.log("del")
+			 })
+			 
+			 
+			 // 点击黄色
+			 mui(".idcard").on('tap','.yellow',function(e){
+				 e.stopPropagation();
+				 mui('#searchPopover').popover('show',document.getElementById("searchToPropover"));
+			 })
 		</script>
 	</body>
 </html>

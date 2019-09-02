@@ -13,12 +13,28 @@
 	color: rgb(78,78,78);
 	font-weight: bold;
 }
+.searchBox{
+	width: 4.5rem;
+	height: 0.6rem;
+	background: #fff;
+	
+}
+.searchBox input{
+	width: 4.5rem;
+	height: 0.6rem;
+	padding: 0;
+	margin: 0;
+	padding-left: 0.2rem;
+	font-size: 0.26rem;
+	font-weight: normal;
+	color: rgb(78,78,78);
+}
 .analysis_icon{
 	width: 0.45rem;
 	height: 0.45rem;
-	position: absolute;
+/* 	position: absolute;
 	right: 0.34rem;
-	top: 0.35rem;
+	top: 0.35rem; */
 	padding: 0;
 	margin: 0;
 	
@@ -27,15 +43,7 @@
 	width: 0.45rem;
 	height: 0.45rem;
 }
-#searchToPropover{
-	display: block;
-	width: 0.45rem;
-	height: 0.45rem;
-	background: rgba(0,0,0,0);
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
+
 /* 菜单tab */
 .package_tab{
 	width: 100%;
@@ -60,7 +68,7 @@
 /* 地址簿列表 */
 .addressList{
 	width: 100%;
-	min-height: 7.5rem;
+	min-height: 7.8rem;
 	
 }
 .addressListBox{
@@ -75,16 +83,16 @@
 }
 .userMessage{
 	width: 5.93rem;
-	height: 1.63rem;
+	height: 1.64rem;
 	/* background: #0062CC; */
 	float: left;
 	padding: 0.2rem 0.43rem;
 }
 .editIcon{
 	float: right;
-	width: 1.57rem;
-	height: 1.23rem;
-	margin-top: 0.2rem;
+	width: 1.3rem;
+	height: 1rem;
+	margin-top: 0.32rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -105,6 +113,15 @@
 }
 .idcard{
 	margin-right: 0.2rem;
+}
+#searchToPropover{
+	display: block;
+	width: 0.87rem;
+	height: 0.64rem;
+	background: rgba(0,0,0,0);
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
 .idcard,.idcard img{
 	width: 0.87rem;
@@ -128,6 +145,10 @@
 	margin-top: 0.2rem;
 }
 .addAddress{
+	position: fixed;
+
+	right: 0;
+	left: 0;
 	width: 2.78rem;
 	height: 0.66rem;
 	border-radius: 0.15rem;
@@ -140,7 +161,8 @@
 	background: rgb(229,64,83);
 	padding: 0;
 	margin: 0 auto;
-	position: relative;
+	bottom: 1rem;
+/* 	position: relative; */
 }
 #openPopover{
 	position: absolute;
@@ -171,6 +193,7 @@
 #middlePopover {
 	height: 3rem;
 	z-index: 10000;
+	
 }
 
 /* 点击搜索弹出框 */
@@ -232,4 +255,35 @@
 .idcard_number{
 	width: 100%;
 	word-break: break-all;
+}
+.introTitle{
+	margin: 0.2rem 0;
+	text-align: center;
+	font-size: 0.3rem;
+}
+.idcardIntro{
+	width: 100%;
+	color: rgb(78,78,78);
+}
+.idcardIntro li{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.1rem 0.2rem 0;
+}
+.idcardIntro li img{
+	width: 0.5rem;
+}
+.idcardIntro li div{
+	width: 4rem;
+	font-size: 0.26rem;
+}
+.addAddress span{
+	display: inline-block;
+	width: 2.78rem;
+	height: 0.66rem;
+}
+.mui-popup-button.mui-popup-button-bold {
+    font-weight: normal;
 }

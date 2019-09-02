@@ -1,8 +1,11 @@
-var http_post = function(url, data, result_function) {
+var http_post = function(url, postData, result_function) {
 	$.ajax({
 		type : 'POST',
 		url : url,
-		data : data,
+		//  data: {
+		//   content: postData,
+		// },
+		data:postData,
 		dataType:'json',
 		contentType : 'application/x-www-form-urlencoded',
 		success : function(result) {
@@ -39,3 +42,15 @@ $.fn.serializeJson=function(){
     });
     return serializeObj;
 };
+
+// // 点击菜单
+// 						mui(".menu_list").on('tap','#orderManagement.active',function(){
+// 							location.href = '../my_package.html'
+// 						})
+// 						
+// 						mui(".menu_list").on('tap','#addressBook.active',function(){
+// 							location.href = '../address_book.html'
+// 						})
+// 						mui(".menu_list").on('tap','#mailing.active',function(){
+// 							location.href = '../index.html'
+// 						})

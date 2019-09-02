@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
+ 	<title>速派快递</title>
     <script src="js/mui.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
@@ -13,8 +13,14 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/rem.js"></script>
+	<script type="text/javascript" src="js/url.js"></script>
 	<script>
-		 mui.init();
+		 // mui.init();
+		 //  $(function(){
+		 // 	location.href = './login.html'	
+			// 	return
+		 // })
+		 
 	</script>
    
 </head>
@@ -28,17 +34,17 @@
 				<aside class="mui-off-canvas-left" id="offCanvasSide">
 					        <div class="storeTitle">门店 <img src="" alt=""></div>
 							<ul class="menu_list">
-								<li>
-									<img src="image/search.png" alt="">
-									<div>寄件</div>
+								<li class="active">
+									<img src="image/sendactive.png" alt="">
+									<div id="mailing">寄件</div>
 								</li>
 								<li>
 									<img src="image/search.png" alt="">
 									<div id="orderManagement">订单管理</div>
 								</li>
 								<li>
-									<img src="image/search.png" alt="">
-									<div>地址簿</div>
+									<img src="image/addressIcon.png" alt="">
+									<div id="addressBook">地址簿</div>
 								</li>
 							</ul>
 							
@@ -60,7 +66,7 @@
 						</div>
 						
 					</div>
-					<div class="analysis_icon" ><img src="./image/analysis.png" alt=""></div>
+					<div class="analysis_icon" ><img src="./image/analysis.png" alt="" class="static"></div>
 				</header>
 	
 				<!-- 主页面内容容器 -->
@@ -93,26 +99,55 @@
 											
 										</div>
 									</div>
-									<div class="messageBox">
-										<div class="name"><label>姓名</label><input type="text"></div>
-										<div class="phone"><label>电话</label><input type="text"></div>
-									</div>
-									<div class="messageBox">
-										<div class="province"><label>省/市</label><input type="text"></div>
-										<div class="pickerBox"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'><img src="image/picker.png" alt=""></button></div>
-									</div>
-									<div class="messageBox">
-										<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
-									</div>
-									<div class="saveToAddress">
-										<div class="selectSave">
-											
-											<span></span>
-											<div>保存到地址簿</div>
-											
+									<div class="auto_partRe" >
+										<div class="messageBox box_name">
+											<div class="name"><label>姓名</label><input type="text"></div>
+											<div class="phone"><label>电话</label><input type="text"></div>
 										</div>
-										<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
-										
+										<div class="messageBox">
+											<div class="province"><label>省/市</label><input type="text" id="recivedAddressStr"></div>
+											<div class="pickerBox"><div id='showCityPicker3' ><img src="image/picker.png" alt=""></div></div>
+										</div>
+										<div class="messageBox">
+											<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号" id="detailedAddress"></div>
+										</div>
+										<div class="saveToAddress">
+											<div class="selectSave">
+												<span class="active"></span>
+												<div>保存到地址簿</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="matchingBox">
+										<div class="matching">
+											<img src="image/matching.png" alt="">
+											<input type="text" placeholder="输入地址进行智能匹配"  class="matching_recived" id="wendaInput">
+											<div class="searchList list_recived" style="display: none;">
+												<div class="mui-scroll-wrapper">
+													<div class="mui-scroll">
+														<ul class="list_recived_wrapper">
+															<!-- <li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li> -->
+															
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="autoSet_receive autoSet">手动填写</div>										
 									</div>
 									<img src="image/submit.png" alt="" class="submitBtn btn_recivePart">
 												
@@ -129,11 +164,11 @@
 													<div class="collect_part active">寄</div>
 													<div class="recipient">寄件人</div>
 												</div>
-												<div class="clearAll"><img src="image/clearAll.png" alt=""><span>清空</span></div>
+												<div class="clearAll"><span class="chooseDot">选择默认网点</span></div>
 												<div class="address"><img src="image/address.png" alt=""><span>地址簿</span></div>
 										
 										</div>
-										<div class="part_send_close closeActive">
+										<div class="part_send_close ">
 											<div class="clearfix">
 												<div class="collect_part">寄</div>
 											</div>
@@ -148,29 +183,68 @@
 											
 										</div>
 									</div>
-									<div class="messageBox">
-										<div class="name"><label>姓名</label><input type="text"></div>
-										<div class="phone"><label>电话</label><input type="text"></div>
-									</div>
-									<div class="messageBox">
-										<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号"></div>
-									</div>
-									<div class="messageBox">
-										<div class="name"><label>国家</label><input type="text"></div>
-										<div class="phone"><label>邮编</label><input type="text"></div>
-									</div>
-									<div class="messageBox">
-										<div class="address_detail"><label>州</label><input type="text" ></div>
-									</div>
-									<div class="saveToAddress">
-										<div class="selectSave">
+									<div class="auto_partSend" >
+										<div class="messageBox box_name">
+											<div class="name"><label>姓名</label><input type="text"></div>
+											<div class="phone"><label>电话</label><input type="text"></div>
+										</div>
+										<div class="messageBox">
+											<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号" class="detail_send"></div>
+										</div>
+										<div class="messageBox box_name">
+											<div class="name"><label>国家</label><input type="text" class="country"></div>
+											<div class="phone"><label>邮编</label><input type="text" class="postal_code"></div>
+										</div>
+										<div class="messageBox">
+											<div class="address_detail"><label>州</label><input type="text" class="province"></div>
+										</div>
+										<div class="saveToAddress">
+											<div class="selectBox">
+												<div class="selectSave">
+													<span></span>
+													<div>保存到地址簿</div>
+												</div>
+												<div class="selectSave">
+													<span></span>
+													<div>设为默认网点</div>
+												</div>
+												<!-- <div class="clearAll setDot"><span class="chooseDot">设为默认网点</span></div> -->
+											</div>
 											
-											<span></span>
-											<div>保存到地址簿</div>
+											
 											
 										</div>
-										<div class="matching"><img src="image/matching.png" alt=""><input type="text" placeholder="输入地址进行智能匹配"></div>
-										
+									</div>
+									
+									<div class="matchingBox">
+										<div class="matching">
+											<img src="image/matching.png" alt="">
+											<input type="text" placeholder="输入地址进行智能匹配" class="matching_send">
+											<div class="searchList list_send" style="display: none;">
+												<div class="mui-scroll-wrapper">
+													<div class="mui-scroll">
+														<ul class="list_send_wrapper">
+															<!-- <li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li>
+															<li class="searchItem">111111111</li> -->
+															
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="autoSet_send autoSet">手动填写</div>										
 									</div>
 									<img src="image/submit.png" alt="" class="submitBtn btn_sendPart">
 												
@@ -191,7 +265,7 @@
 												
 										
 										</div>
-										<div class="part_goods_close closeActive">
+										<div class="part_goods_close ">
 											<div class="clearfix">
 												<div class="collect_part">物</div>
 											</div>
@@ -239,7 +313,7 @@
 							</div>
 						</div>
 						
-						<a href="#orderPopover" id="confirmOrder" class="confirm">确认订单</a>
+						<!-- <a href="#orderPopover" id="confirmOrder" class=" confirm">确认订单</a> -->
 						<!-- <button class="confirm">确定下单</button> -->
 						
 						
@@ -258,7 +332,7 @@
 			<div class="mui-popover-arrow"></div>
 			<!-- <div class="mui-scroll-wrapper">
 				<div class="mui-scroll"> -->
-					<input type="text" class="goodsSearch">
+					<input type="text" class="goodsSearch" placeholder="请输入商品名 智能匹配">
 					<div class="searchReault">
 						<ul>
 							<li>
@@ -280,7 +354,7 @@
 						</ul>
 					</div>
 					<div class="noGoodsMessage">
-						<div>如每有想添加的商品，您可新增一条商品信息</div>
+						<div>系统中如果没有你需要的产品信息 请手动添加</div>
 						<div class="addGoods">新增</div>
 					</div>
 			<!-- 	</div>
@@ -445,55 +519,98 @@
 		
 		<script type="text/javascript" src="js/mui.picker.js"></script>
 		<script type="text/javascript" src="js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
 		
 		 <script type="text/javascript" charset="utf-8">
+			 
 			 $(function(){
+				 // 省市区列表数据
+				 var cityData3 = '';
+				 // 收件人只能匹配数组
+				 var matchingRecived = [];
+				 // 寄件人智能匹配
+				 var matchingSend = [];
+				
+				 
+				 
+				 
+				 
 				 $(".part_recipient_wrapper").css({'transition':'all ease 0.2s'})
 				 $(".part_send_wrapper").css({'transition':'all ease 0.2s'})
 				 $(".part_goods_wrapper").css({'transition':'all ease 0.2s'})
-				  
+				 $(".part_send_wrapper").css({'transition':'all ease 0.2s'})
+				 $(".auto_partRe").css({'transition':'all ease 0.2s'})
+				 $(".auto_partSend").css({'transition':'all ease 0.2s'})
+				 
 				 mui('.mui-scroll-wrapper').scroll({
 					deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
 					bounce: true
 					});
 				
+					
+				// 获取省市区列表
+				 http_get(HTTP_URL.ADDRESSLIST,function(res){
+					if(res.code == 1){
+						cityData3 = res.data;
+						var picker = new mui.PopPicker({
+								layer: 3
+							});
+								picker.setData(cityData3)
+								$("#showCityPicker3").on('tap',function(){
+									 // 拼接省市区字符串
+									var addressStr = '';
+									picker.show(function(SelectedItem) {
+										for(var i=0;i<SelectedItem.length;i++){
+											addressStr+=SelectedItem[i].text + ' '
+										}
+										console.log(addressStr)
+										$("#recivedAddressStr").val(addressStr)
+											
+							})
+						})
+						
+						
+					}
+				})
+				
 			 })
 
 
-		 
-			$(".analysis_icon").on('tap',function(){
+		   // 点击上方地址解析按钮
+			mui(".analysis_icon").on('tap','img.static',function(){
 				$(".analysis_body").animate({'left':0},300)
+				$(".analysis_icon img").addClass('active').removeClass('static')
 				
 			})
+			mui(".analysis_icon").on('tap','img.active',function(){
+				$(".analysis_body").animate({'left':'5.62rem'},300)
+				$(".analysis_icon img").removeClass('active').addClass('static')
+				
+			})
+			
 		
 			
-					var cityData3 = [{
-							value: '130000',
-							text: '河北省',
-							children: [{
-								value: "130100",
-								text: "石家庄市",
-								children: [{
-									value: "130102",
-									text: "长安区"
-								}, {
-									value: "130103",
-									text: "桥东区"
-								}, {
-									value: "130104",
-									text: "桥西区"
-								}]
-							}]
-					}]
-					var picker = new mui.PopPicker({
-							layer: 3
-						});
-							picker.setData(cityData3)
-							$("#showCityPicker3").on('tap',function(){
-								picker.show(function(SelectedItem) {
-									console.log(SelectedItem);
-								})
-							})
+			
+			
+					// var cityData3 = [{
+					// 		value: '130000',
+					// 		text: '河北省',
+					// 		children: [{
+					// 			value: "130100",
+					// 			text: "石家庄市",
+					// 			children: [{
+					// 				value: "130102",
+					// 				text: "长安区"
+					// 			}, {
+					// 				value: "130103",
+					// 				text: "桥东区"
+					// 			}, {
+					// 				value: "130104",
+					// 				text: "桥西区"
+					// 			}]
+					// 		}]
+					// }]
+					
 						// picker.pickers[0].setSelectedIndex(1);
 						// picker.pickers[1].setSelectedIndex(1);
 						
@@ -508,8 +625,15 @@
 							$(".submitBtn").css('display','none')
 							$(".part_recipient_wrapper").css({'height':'1.03rem'})
 							
+							// var height = ''
+							// if($(".autoSet_send").attr('class') == 'autoSet_send autoSet'){
+							// 	height = '3.6rem'
+							// }else if($(".autoSet_send").attr('class') == 'autoSet_send autoSet active'){
+							// 	
+							// 	height = '8.3rem'
+							// }
 							
-							$(".part_send_wrapper").css({'margin-top':'0.2rem','height':'7.9rem','margin-bottom':'0.55rem'})	
+							$(".part_send_wrapper").css({'margin-top':'0.2rem','height':'auto','margin-bottom':'0.55rem'})	
 							$(".part_send_close").css('display','none')
 							$(".recipient_titile.part_send_title").css('display','flex')
 							$(".submitBtn.btn_sendPart").css('display','block')
@@ -526,8 +650,15 @@
 							$(".part_send_wrapper").removeClass('active').addClass('active')
 							$(".part_goods_wrapper").removeClass('active').addClass('active')
 							$(".part_recipient_wrapper").removeClass('active')
+							// var height = ''
+							// if($(".auto_partRe").attr('class') == 'auto_partRe autoSet'){
+							// 	height = '3.6rem'
+							// }else if($(".autoSet_send").attr('class') == 'auto_partRe autoSet active'){
+							// 	
+							// 	height = '7.3rem'
+							// }
 							
-							$(".part_recipient_wrapper").css({'height':'6.9rem'})
+							$(".part_recipient_wrapper").css({'height':'auto'})
 							$(".part_rec").css('display','flex')
 							$(".part_rec_close").css('display','none')
 							$(".submitBtn").css('display','block')
@@ -561,6 +692,8 @@
 							$(".recipient_titile.part_send_title").css('display','none')
 							$(".submitBtn.btn_sendPart").css('display','none')
 							
+							
+							
 							$(".part_goods_wrapper").css({'height':'auto'})
 							$(".part_goods_close").css('display','none')
 							$(".recipient_titile.part_goods_title").css('display','flex')
@@ -568,16 +701,16 @@
 						
 						
 						
-						mui(".part_send").on('tap','.part_send_close',function(){
+						mui(".part_send").on('tap','.part_send_close.closeActive',function(){
 							sendStyle()
 						})
 						
 						mui(".part_recipient").on('tap',".part_rec_close",function(){
-							
+						
 							receivedStyle()
 						})
 						
-						mui(".part_goods").on('tap',".part_goods_close",function(){
+						mui(".part_goods").on('tap',".part_goods_close.closeActive",function(){
 							goodsStyle()
 							
 						})
@@ -607,16 +740,174 @@
 							mui('#middlePopover').popover('show',document.getElementById("closeWindow"));
 						})
 						
-						var btn = document.getElementsByClassName("btn_recivePart");
+					    // 点击收件人对勾之后显示寄件人框添加类名
 						mui(".part_recipient_wrapper").on('tap',".btn_recivePart",function(){
-						console.log("ooo")
-						    sendStyle()
+							sendStyle()
+							$(".part_send_close").addClass('closeActive')
 						})
+						// 点击寄件人对勾
+						mui(".part_send_wrapper").on('tap',".btn_sendPart",function(){
+							goodsStyle()
+							var str =` <div class="clearfix">
+												<div class="collect_part">物</div>
+											</div>
+										<div class="messageBody">
+											<div class="messageBody_name">11111</div>
+											<div class="messageBody_phone">45</div>
+											<div class="messageBody_address">15646486</div>
+												
+										</div>
+										<div class="editMessage"><img src="image/editIcon.png" alt=""></div>`
+							$(".part_send_close").html(str);
+							$(".part_goods_close").addClass('closeActive');
+						})
+					
+						
+						// 点击菜单
 						mui(".menu_list").on('tap','#orderManagement',function(){
 							location.href = './my_package.html'
 						})
 						
+						mui(".menu_list").on('tap','#addressBook',function(){
+							location.href = './address_book.html'
+						})
 						
+						
+						// 点击收件人里面手动填写
+						mui(".part_recipient_wrapper").on('tap','.autoSet_receive',function(){
+							console.log("pp")
+							$(".auto_partRe").css({'height':'4rem'})
+							$(".autoSet_receive").addClass('active')
+							$(this).parent().css({'margin-top':0})
+							// $(".part_recipient_wrapper").css({'height':'7.3rem'})
+						})
+						mui(".part_send_wrapper").on('tap','.autoSet_send',function(){
+							console.log("pp")
+							$(".auto_partSend").css({'height':'5rem'})
+							$(".autoSet_send").addClass('active')
+							$(this).parent().css({'margin-top':0})
+							// $(".part_send_wrapper").css({'height':'8.3rem'})
+						})
+						
+						
+						// 收件人智能匹配
+						$(".matching_recived").bind('input propertychange',function(e){
+							// if($(this).val())
+							
+							 	console.log("opoipioujo")
+							http_post(HTTP_URL.MATCHING_RECIVED,{keyword:$(this).val()},function(res){
+								if(res.code == 1){
+									if(res.data.length){
+										matchingRecived = res.data;
+										$(".list_recived").css({'display':'block'})
+										$(".list_recived_wrapper").empty();
+										var str = '';
+										for(var i =0;i<matchingRecived.length;i++){
+											str +=`
+											<li class="searchItem" data-index="${i}">${matchingRecived[i].district} ${matchingRecived[i].address}</li>
+											`
+										}
+										$(".list_recived_wrapper").html(str)
+										
+									}else{
+										console.log("ppp")
+										$(".list_recived").css({'display':'block'})
+										$(".list_recived_wrapper").empty();
+										var str = `
+										<li class="searchItem" style="text-align:center">没有搜索结果</li>
+										`;
+										$(".list_recived_wrapper").html(str)
+									}
+									
+								}
+								
+							})
+						
+						})
+						
+						// 点击收件人搜索结果
+						mui(".list_recived_wrapper").on('tap','.searchItem',function(e){
+							 e.stopPropagation();
+							
+							$(".list_recived").css({'display':'none'});
+							$(".auto_partRe").css({'height':'4rem'});
+							$(".autoSet_receive").addClass('active');
+							$(".matchingBox").css({'margin-top':0});
+							var chooseIndex = $(this).data('index');
+							
+							$("#recivedAddressStr").val(matchingRecived[chooseIndex].district);
+							$("#detailedAddress").val(matchingRecived[chooseIndex].address)
+						})
+						
+						// 寄件人只能匹配
+						$(".matching_send").bind('input propertychange',function(e){
+								http_post(HTTP_URL.MATCHING_SEND,{keyword:$(this).val()},function(res){
+								if(res.code == 1){
+									if(res.data.length){
+										matchingSend = res.data;
+										$(".list_send").css({'display':'block'})
+										$(".list_send_wrapper").empty();
+										var str = '';
+										for(var i =0;i<matchingSend.length;i++){
+											str +=`
+											<li class="searchItem" data-index="${i}">${matchingSend[i].description} </li>
+											`
+										}
+										$(".list_send_wrapper").html(str)
+										console.log(res)
+									}else{
+										$(".list_send").css({'display':'block'})
+										$(".list_send_wrapper").empty();
+										var str = `
+										<li class="searchItem" style="text-align:center">No search results</li>
+										`;
+										$(".list_send_wrapper").html(str)
+									}
+									
+									
+								}
+								
+							})
+						})
+						
+							
+						// 点击寄件人搜索结果
+						mui(".list_send_wrapper").on('tap','.searchItem',function(e){
+							 e.stopPropagation();
+							
+							$(".list_send").css({'display':'none'});
+							$(".auto_partSend").css({'height':'5rem'});
+							$(".autoSet_send").addClass('active');
+							$(".matchingBox").css({'margin-top':0});
+							var chooseIndex = $(this).data('index');
+							var placeid = matchingSend[chooseIndex].place_id;
+							
+							http_post(HTTP_URL.CHOOSE_SENDADDRESS,{placeid:placeid},function(res){
+								if(res.code == 1){
+									$(".detail_send").val(res.data.address2+','+res.data.address1);
+									$(".country").val(res.data.country);
+									$(".postal_code").val(res.data.postal_code);
+									$(".province").val(res.data.province);
+								}
+							})
+							
+						})
+						
+						// $(".matching_recived").on('blur',function(){
+						// 	// console.log("blur")
+						// 
+						// })
+					
+						document.getElementById('wendaInput').addEventListener('blur',function(){
+								$(".list_recived").css({'display':'none'})
+						})
+
+						
+						// mui(".mui-content").on('tap','.mui-scroll',function(e){
+						// 	
+						// 	console.log("opoipioujo")
+						// 	$(".list_recived").css({'display':'none'})
+						// })
 						
 					
 						

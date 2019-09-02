@@ -70,7 +70,7 @@ a.mui-pull-left:active{
 	position: absolute;
 	top: 0;
 	left: 0;
-	animation: bounceIn 0.9s;
+	animation: bounceIn 2s;
 }
 @keyframes bounceIn {
   from,
@@ -130,19 +130,21 @@ a.mui-pull-left:active{
 	position: relative;
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
 	/* transition: all 0.3s; */
+	/* max-height: 10rem; */
 
 }
 .part_recipient_wrapper{
-	height: 6.9rem;
+	/* height: 6.9rem; */
 	overflow: hidden;
 	margin-top: 0.4rem;
+	padding-bottom: 0.9rem;
 	
 
 
 }
 .recipientInfo{
 	width: 100%;
-	border-bottom: 0.05rem solid rgb(225,227,226);
+	/* border-bottom: 0.05rem solid rgb(225,227,226); */
 	
 }
 .part_rec_close{
@@ -231,7 +233,7 @@ a.mui-pull-left:active{
 }
 .clearAll{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	margin-right: 1.9rem;
 }
@@ -250,6 +252,11 @@ a.mui-pull-left:active{
    font-size: 0.22rem;
    color: #fff;
    border-radius: 0.06rem;
+}
+.clearAll span.chooseDot{
+	width: 1.5rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
 }
 .address{
 	display: flex;
@@ -285,51 +292,73 @@ a.mui-pull-left:active{
 	padding: 0 0.25rem;
 	background: #fff;
 }
+.messageBox.box_name{
+	border-bottom: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .messageBox div{
 	width: 50%;
 	float: left;
 	display: flex;
-	justify-content: space-between;align-items: center;
+	justify-content: space-between;
+	align-items: flex-end;
 	height: 1rem;
+	padding-bottom: 0.1rem;
 	
 }
 .messageBox div label{
 	font-weight: bold;
+	font-size: 0.3rem;
+	color: rgb(121,120,120);
+	height: 0.4rem;
+	line-height: 0.4rem;
 }
 .messageBox div input{
-	width: 2.5rem;
+	width: 2.1rem;
 	padding: 0;
 	margin: 0;
-	border:none
+	border:none;
+	height: 0.4rem;
+	
+	line-height: 0.4rem;
+}
+.messageBox div input#recivedAddressStr{
+	width: 5rem;
+	
 }
 .messageBox div.name{
-	border-right: 0.05rem solid rgb(225,227,226);
-	padding-right: 0.2rem;
+	/* border-right: 0.05rem solid rgb(225,227,226); */
+	margin-right: 0.2rem;
+	border-bottom: 0.05rem solid rgb(225,227,226);
+	padding: 0 0.25rem 0.1rem;
 
 
 	
 }
 .messageBox div.phone{
-	padding-left: 0.3rem;
+	/* padding-left: 0.3rem; */
+	margin-left: 0.3rem;
+	padding: 0 0.25rem 0.1rem;
+	border-bottom: 0.05rem solid rgb(225,227,226);
 }
+
 .messageBox div.phone label{
 	margin-right: 0.06rem;
-}
-.messageBox div label{
-	font-size: 0.3rem;
-	color: rgb(121,120,120);
-	
 	
 }
+
 .messageBox div.province{
-	border-right: 0.05rem solid rgb(225,227,226);
+	/* border-right: 0.05rem solid rgb(225,227,226); */
 	width: 85%;
 }
 .messageBox div.pickerBox{
 	width: 15%;
 	position: relative;
 }
-.pickerBox button{
+.pickerBox div{
 	border: none;
 	/* width: 100%; */
 	/* height: 0.2rem; */
@@ -337,7 +366,7 @@ a.mui-pull-left:active{
 	justify-content: center;
 	align-items: center;
 }
-.pickerBox button img{
+.pickerBox div img{
 	width: 0.38rem;
 	height: 0.2rem;
 	
@@ -369,59 +398,129 @@ a.mui-pull-left:active{
 }
 .messageBox div.address_detail{
 	width: 100%;
+	justify-content: flex-start;
 }
 .messageBox div.address_detail input{
-	width: 5.5rem;
+	width: 5.4rem;
+	margin-left: 0.3rem;
 }
 .saveToAddress{
 	width: 100%;
 	background: #fff;
 	
 }
-.selectSave{
+.selectBox{
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.clearAll.setDot{
+	margin-right: 0;
 	padding: 0.36rem 0.42rem 0.2rem;
+}
+.selectSave{
+	width: 3rem;
+
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	
-	
+	padding: 0.36rem 0 0.2rem 0.7rem;
 }
 .selectSave span{
 
 	width: 0.26rem;
 	height: 0.26rem;
-	border: 0.01rem solid rgb(166,166,166);
+	border: 0.03rem solid rgb(166,166,166);
 	border-radius: 50%;
 	margin-right: 0.2rem;
+}
+.selectSave span.active{
+	background-color: rgb(229,64,83);
+	border: 0.03rem solid #fff;
 }
 .selectSave div{
 
 	font-size: 0.24rem;
 	color: rgb(51,51,51);
 }
+.matchingBox{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.35rem 0 0;
+	margin-bottom: 1.4rem;
+	margin-top: 0.3rem;
+}
 .matching{
-	width: 6.73rem;
+	width: 4.5rem;
 	height: 0.55rem;
 	background: rgb(238,238,238);
-	margin: 0 auto;
+	/* margin: 0 auto; */
+	margin-left: 0.7rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 0.12rem;
+	
+	position: relative;
+}
+.searchList{
+	position: absolute;
+	width: 4.5rem;
+	height: 3.1rem;
+	top: 0.55rem;
+	left: 0;
+	z-index: 9999;
+	/* background: red; */
+	background: #fff;
+	/* box-shadow: 0 0.05rem 0.2rem 0.05rem rgba(0,0,0,0.1); */
+	border: 0.01rem solid rgba(0,0,0,0.2);
+	border-top: 0;
+
+}
+.searchItem{
+	width: 4.5rem;
+	/* height: 0.55rem; */
+	font-size: 0.27rem;
+	color: #393939;
+	padding: 0.08rem;
+	
+}
+.auto_partRe,.auto_partSend{
+	height: 0;
+	overflow: hidden;
+	/* transition:height ease 0.2s; */
+}
+.autoSet{
+	width: 1.3rem;
+	height: 0.4rem;
+	background-color: rgb(229,64,83);
+	font-size: 0.26rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.4rem;
+	border-radius: 0.1rem;
+	
+}
+.autoSet_receive.active,.autoSet_send.active{
+	visibility: hidden;
 }
 .matching img{
 	width: 0.33rem;
 	height: 0.33rem;
 }
 .matching input{
-	width: 6rem;
+	width: 4.5rem;
 	height: 0.55rem;
 	border:none;
 	font-size: 0.22rem;
 	margin: 0;
 	padding: 0;
 	background: rgb(238,238,238);
+	margin-left: 0.1rem;
+	line-height: 0.55rem;
 }
 .submitBtn{
 	width: 1.11rem;
@@ -449,6 +548,7 @@ a.mui-pull-left:active{
 	height: 1.03rem;
 	overflow: hidden;
 	margin-top: 0.55rem;
+	padding-bottom: 0.9rem;
 	
 
 }
@@ -749,6 +849,7 @@ a.mui-pull-left:active{
 	border-radius: 0;
 	padding-left: 0.15rem;
 	overflow: auto;
+	font-size: 0.28rem;
 }
 .noGoodsMessage{
 	width: 5.18rem;
