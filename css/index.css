@@ -1149,3 +1149,4 @@ a:active{
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
+#detailedAddress::-webkit-scrollbar {display:none}
