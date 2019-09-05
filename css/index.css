@@ -31,7 +31,7 @@ a.mui-pull-left:active{
 	/* visibility: hidden; */
 	/* transition: all 0.3s; */
 	/* display: none; */
-	
+
 }
 .analysis{
 	width: 5.62rem;
@@ -40,7 +40,7 @@ a.mui-pull-left:active{
 	margin-left: 0.8rem;
 	margin-top: 0.08rem;
 	position: relative;
-	
+
 }
 .analysis_title{
 	font-size: 0.24rem;
@@ -61,8 +61,8 @@ a.mui-pull-left:active{
 	top: 0.35rem;
 	padding: 0;
 	margin: 0;
-	
-	
+
+
 }
 .analysis_icon img{
 	width: 0.42rem;
@@ -138,14 +138,14 @@ a.mui-pull-left:active{
 	overflow: hidden;
 	margin-top: 0.4rem;
 	padding-bottom: 0.9rem;
-	
+
 
 
 }
 .recipientInfo{
 	width: 100%;
 	/* border-bottom: 0.05rem solid rgb(225,227,226); */
-	
+
 }
 .part_rec_close{
 	width: 100%;
@@ -205,7 +205,7 @@ a.mui-pull-left:active{
     justify-content: space-between;
 	align-items: center;
 	background: #fff;
-	
+
 }
 .collect_part{
 	width: 0.9rem;
@@ -270,7 +270,7 @@ a.mui-pull-left:active{
 	background: rgb(146,145,145);
 	border-radius: 0.08rem;
 	padding: 0 0.1rem;
-	
+
 }
 .address img{
 	width: 0.28rem;
@@ -307,7 +307,7 @@ a.mui-pull-left:active{
 	align-items: flex-end;
 	height: 1rem;
 	padding-bottom: 0.1rem;
-	
+
 }
 .messageBox div label{
 	font-weight: bold;
@@ -322,12 +322,12 @@ a.mui-pull-left:active{
 	margin: 0;
 	border:none;
 	height: 0.4rem;
-	
+
 	line-height: 0.4rem;
 }
 .messageBox div input#recivedAddressStr{
 	width: 5rem;
-	
+
 }
 .messageBox div.name{
 	/* border-right: 0.05rem solid rgb(225,227,226); */
@@ -336,7 +336,7 @@ a.mui-pull-left:active{
 	padding: 0 0.25rem 0.1rem;
 
 
-	
+
 }
 .messageBox div.phone{
 	/* padding-left: 0.3rem; */
@@ -347,7 +347,7 @@ a.mui-pull-left:active{
 
 .messageBox div.phone label{
 	margin-right: 0.06rem;
-	
+
 }
 
 .messageBox div.province{
@@ -369,7 +369,7 @@ a.mui-pull-left:active{
 .pickerBox div img{
 	width: 0.38rem;
 	height: 0.2rem;
-	
+
 }
 #showCityPicker3{
 	position: absolute;
@@ -383,12 +383,12 @@ a.mui-pull-left:active{
 	width: 1.3rem;
 	height: 1rem;
 	background: rgba(0,0,0,0);
-	
+
 }
 .mui-btn-blue, .mui-btn-primary, input[type=submit]{
 	background-color: rgb(229,64,83);
 	border: 0.01rem solid rgb(229,64,83);
-	
+
 }
 .mui-poppicker-body{
 	background: #fff;
@@ -407,7 +407,7 @@ a.mui-pull-left:active{
 .saveToAddress{
 	width: 100%;
 	background: #fff;
-	
+
 }
 .selectBox{
 	width: 100%;
@@ -463,7 +463,7 @@ a.mui-pull-left:active{
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 0.12rem;
-	
+
 	position: relative;
 }
 .searchList{
@@ -486,7 +486,7 @@ a.mui-pull-left:active{
 	font-size: 0.27rem;
 	color: #393939;
 	padding: 0.08rem;
-	
+
 }
 .auto_partRe,.auto_partSend{
 	height: 0;
@@ -502,7 +502,7 @@ a.mui-pull-left:active{
 	text-align: center;
 	line-height: 0.4rem;
 	border-radius: 0.1rem;
-	
+
 }
 .autoSet_receive.active,.autoSet_send.active{
 	visibility: hidden;
@@ -532,16 +532,16 @@ a.mui-pull-left:active{
 
 /* 寄东西 */
 .part_send{
-	
+
 	background: #fff;
 	padding-bottom: 0.84rem;
-	
+
 	background: #fff;
 	position: relative;
 	/* height: 1.03rem; */
 	/* overflow: hidden; */
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
-	
+
 
 }
 .part_send_wrapper{
@@ -549,21 +549,21 @@ a.mui-pull-left:active{
 	overflow: hidden;
 	margin-top: 0.55rem;
 	padding-bottom: 0.9rem;
-	
+
 
 }
 .recipientInfo.send{
 	margin-top: 0.95rem;
 	background: #fff;
-	
-	
+
+
 }
 .recipient_titile.part_send_title{
 	display: none;
 }
 .submitBtn.btn_sendPart{
 	display: none;
-	
+
 }
 .part_send_close{
 	width: 100%;
@@ -590,14 +590,14 @@ a.mui-pull-left:active{
 .part_goods{
 
 	background: #fff;
-	
+
 	background: #fff;
 	position: relative;
 	/* height: 1.03rem; */
 	/* overflow: hidden; */
 	/* transition: all 0.3s; */
 	box-shadow: -0.02rem 0.02rem 0.06rem 0 rgba(0,0,0,0.3);
-	
+
 }
 .part_goods_wrapper{
 	height: 1.03rem;
@@ -639,7 +639,7 @@ a.mui-pull-left:active{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	
+
 }
 .tab_name{
 	width: 55%;
@@ -714,7 +714,7 @@ a.mui-pull-left:active{
 }
 #middlePopover{
 	position: fixed;
-	
+
 	right: 0!important;
 	left: 0!important;
 	margin: 0 auto;
@@ -725,13 +725,13 @@ a.mui-pull-left:active{
 .goodsIntoduce{
 	width: 100%;
 	padding: 0 0.3rem;
-	
+
 }
 .goodsIntoduce li{
 	width: 100%;
 	height: 0.7rem;
 	border-bottom: 0.01rem solid rgb(191,191,191);
-	
+
 }
 .introItem{
 	display: flex;
@@ -762,19 +762,19 @@ a.mui-pull-left:active{
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0.4rem 0 ;
-	
+
 }
 .mui-numbox{
 	border: none;
 	font-size: 0.26rem;
 	width: 113px;
 	height: 30px;
-	
+
 }
 .mui-numbox .mui-input-numbox, .mui-numbox .mui-numbox-input{
 	border:solid 0.01rem #ccc!important;
 	font-size: 0.26rem;
-	
+
 }
 .count_title{
 	width: 0.8rem;
@@ -887,7 +887,7 @@ a.mui-pull-left:active{
 	border-bottom: 0.01rem solid #E1E3E2;
 	font-size: 0.22rem;
 	color: #787878;
-	
+
 }
 .brandName{
 	width: 100%;
@@ -941,7 +941,7 @@ a.mui-pull-left:active{
 	position: relative;
 	height: 1.03rem;
 	margin-bottom: 0.11rem;
-	
+
 }
 .part_rec_close_popover{
 	width: 100%;
@@ -950,7 +950,7 @@ a.mui-pull-left:active{
 	justify-content: space-between;
 	align-items: center;
 	background: rgb(243,241,241);
-	
+
 }
 .recipientInfo_popover{
 	border-bottom: none;
@@ -1015,7 +1015,7 @@ a.mui-pull-left:active{
 	margin-left: 1rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	
+
 }
 .itemCount{
 	width: 1.3rem;
@@ -1063,9 +1063,9 @@ a.mui-pull-left:active{
 	height: 0.43rem;
 	border: 0;
 	margin: 0;
-	
+
 	font-size: 0.26rem;
-	
+
 }
 .sort_order{
 	color: #fff;
@@ -1099,12 +1099,12 @@ a:active{
 	position: fixed;
 	right: 0!important;
 	left: 0!important;
-	
+
 	top: 0!important;
 	bottom: 0!important;
 	margin: auto;
 	border-radius: 0;
-	
+
 }
 .checkoutSuccess{
 	font-size: 0.5rem;
@@ -1137,4 +1137,15 @@ a:active{
 }
 .continueBtn div.continueYes{
 	background: rgb(49,48,48);
+}
+#detailedAddress{
+	width: 5.4rem;
+	padding: 0;
+	margin: 0;
+	margin-left: 0.3rem;
+
+	border:none;
+	height: 0.4rem;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }

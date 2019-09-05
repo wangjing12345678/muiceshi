@@ -109,7 +109,12 @@
 											<div class="pickerBox"><div id='showCityPicker3' ><img src="image/picker.png" alt=""></div></div>
 										</div>
 										<div class="messageBox">
-											<div class="address_detail"><label>详细地址</label><input type="text" placeholder="精确到门牌号" id="detailedAddress" class="mui-draggable"></div>
+											<div class="address_detail"><label>详细地址</label>
+												<!--<input type="text" placeholder="精确到门牌号" id="detailedAddress" class="mui-draggable">-->
+												<textarea rows="1" cols=""  placeholder="精确到门牌号" id="detailedAddress" wrap="off">
+
+												</textarea>
+											</div>
 										</div>
 										<div class="saveToAddress">
 											<div class="selectSave">
@@ -908,9 +913,7 @@
 						// 	console.log("opoipioujo")
 						// 	$(".list_recived").css({'display':'none'})
 						// })
-             document.addEventListener('touchmove', function (event) {
-                 event.preventDefault();
-             }, false);
+
 
 
 
