@@ -1,5 +1,9 @@
 var flag = '';
 var pic_a = '';
+var pic_b = '';
+alert("pop")
+console.log("opop")
+
 			
 			    //弹出框水平垂直居中
 			(window.onresize = function () {
@@ -80,22 +84,30 @@ var pic_a = '';
 			$("#sureCut").on("click",function () {
 				if(flag == 'front'){
 					 if ($("#tailoringImg").attr("src") == null ){
+						 console.log("ppp")
 					    return false;
 					}else{
+						
 					    var cas = $('#tailoringImg').cropper('getCroppedCanvas');//获取被裁剪后的canvas
 					    var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
 					    $("#frontImg").prop("src",base64url);//显示为图片的形式
-					    // console.log(base64url)
+					    console.log(pic_a&&pic_b)
 						pic_a = base64url
+						var content = {'pic_a':pic_a,'pic_b':base64url},
+						// if(pic_a&&pic_b){
+						// 	http_post(HTTP_URL.UPLOAD_PIC,{content:JSON.stringify(content)},function(res){
+						// 		console.log(res)
+						// 	})
+						// }
 						
 						
-						$(".document_otherSide").html(`
-							<label title="上传图片" for="chooseImg_otherSide" class=" choose-btn" id="replaceImg">
-								<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_otherSide" class="hidden" onchange="selectImg(this,'otherSide')" >
-								<img src="image/otherSide.png" alt="" id="otherSideImg">
-								<div>点击上传国徽面</div>
-							</label>
-						`)
+						// $(".document_otherSide").html(`
+						// 	<label title="上传图片" for="chooseImg_otherSide" class=" choose-btn" id="replaceImg">
+						// 		<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg_otherSide" class="hidden" onchange="selectImg(this,'otherSide')" >
+						// 		<img src="image/otherSide.png" alt="" id="otherSideImg">
+						// 		<div>点击上传国徽面</div>
+						// 	</label>
+						// `)
 
 					    //关闭裁剪框
 					    closeTailor();
@@ -105,14 +117,21 @@ var pic_a = '';
 					 if ($("#tailoringImg").attr("src") == null ){
 					    return false;
 					}else{
+						console.log(pic_a&&pic_b)
 					    var cas = $('#tailoringImg').cropper('getCroppedCanvas');//获取被裁剪后的canvas
 					    var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
 					    $("#otherSideImg").prop("src",base64url);//显示为图片的形式
-					    // console.log(base64url)
-						var content = {'pic_a':pic_a,'pic_b':base64url}
-						http_post(HTTP_URL.UPLOAD_PIC,{content:JSON.stringify(content)},function(res){
-							console.log(res)
-						})
+					    console.log(base64url)
+						pic_b = base64url
+						var content = {'pic_a':pic_a,'pic_b':base64url},
+						// if(pic_a&&pic_b){
+						// 	http_post(HTTP_URL.UPLOAD_PIC,{content:JSON.stringify(content)},function(res){
+						// 		console.log(res)
+						// 	})
+						// }
+						// http_post(HTTP_URL.UPLOAD_PIC,{content:JSON.stringify(content)},function(res){
+						// 	console.log(res)
+						// })
 						
 						
 								
